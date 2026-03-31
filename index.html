@@ -4,1061 +4,1074 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Pratishtha Digital Solutions | Building Reputation</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
-        /* --- 🎨 PREMIUM COLOR PALETTE --- */
+        /* =========================================
+           1. PREMIUM THEME VARIABLES
+           ========================================= */
         :root {
-            --primary-blue: #003399;
-            --primary-gradient: linear-gradient(135deg, #003399 0%, #2563eb 100%);
-            --orange-gradient: linear-gradient(135deg, #ff5722 0%, #ff8c00 100%);
-            --primary-orange: #ff5722;
-            --dark-bg: #0f172a;
-            --light-bg: #f8fafc;
+            --primary-blue: #0044cc;
+            --primary-dark: #002a80;
+            --primary-orange: #ff6600;
+            --whatsapp-color: #25D366;
+            --text-main: #0a0a0a;
+            --text-light: #444444;
+            --bg-light: #f4f7fa;
             --white: #ffffff;
-            --text-main: #1e293b;
-            --text-light: #64748b;
-            --whatsapp-green: #25D366;
-            --shadow-soft: 0 10px 40px -10px rgba(0,0,0,0.08);
-            --shadow-icon: 0 8px 20px rgba(0,0,0,0.12);
-            --radius-lg: 20px;
+            --shadow-card: 0 10px 30px rgba(0,0,0,0.06);
+            --radius-xl: 16px;
         }
 
-        /* --- GLOBAL RESET --- */
+        /* Custom Premium Scrollbar */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: var(--primary-blue); border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--primary-orange); }
+
         * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
         html { scroll-behavior: smooth; }
+        
         body { 
             font-family: 'Poppins', sans-serif; 
-            line-height: 1.6; 
             color: var(--text-main); 
-            background-color: #f3f6f8; 
-            overflow-x: hidden; 
-            padding-bottom: 0; 
+            line-height: 1.5; 
+            background-color: var(--bg-light);
+            padding-bottom: 70px; 
+            overflow-x: hidden;
+            font-size: 14px; 
         }
-        body.lang-in { font-family: 'Noto Sans Devanagari', 'Poppins', sans-serif; }
-        a { text-decoration: none; transition: 0.3s; }
-        ul { list-style: none; }
-        img { max-width: 100%; height: auto; }
 
-        /* --- UTILITIES --- */
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; width: 100%; }
-        .section-padding { padding: 80px 0; }
+        body.lang-in { font-family: 'Noto Sans Devanagari', 'Poppins', sans-serif; }
+
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+        .container { max-width: 1150px; margin: 0 auto; padding: 0 20px; }
+        
+        .section-padding { padding: 60px 0; } 
         .text-center { text-align: center; }
         .hidden-desktop { display: none; }
 
-        /* --- ✨ PRO ICON STYLING (3D Look) --- */
-        .icon-box {
-            width: 70px; height: 70px;
-            border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 2rem;
-            box-shadow: var(--shadow-icon);
-            border: 2px solid white;
-            transition: transform 0.3s ease;
-        }
-        .icon-blue { background: linear-gradient(145deg, #e3f2fd, #bbdefb); color: var(--primary-blue); }
-        .icon-orange { background: linear-gradient(145deg, #fbe9e7, #ffccbc); color: var(--primary-orange); }
-        
-        /* Service Cards: Align Icons Left */
-        .service-card .icon-box {
-            margin: 0 0 20px 0; 
-            width: 60px; height: 60px; font-size: 1.6rem;
-        }
-
-        /* Contact specific icons */
-        .icon-contact {
-            width: 50px; height: 50px; font-size: 1.4rem; margin: 0; flex-shrink: 0;
-        }
-
-        .feature-card:hover .icon-box, .service-card:hover .icon-box {
-            transform: translateY(-5px) scale(1.05);
-        }
-
-        /* --- BUTTONS --- */
-        .btn { 
-            display: inline-flex; align-items: center; justify-content: center; 
-            padding: 12px 30px; border-radius: 50px; font-weight: 600; 
-            cursor: pointer; border: none; font-size: 1rem; transition: all 0.3s ease; gap: 8px; 
-            letter-spacing: 0.5px;
-        }
-        .btn-primary { 
-            background: var(--orange-gradient); color: var(--white); 
-            box-shadow: 0 8px 20px rgba(255, 87, 34, 0.3);
-        }
-        .btn-primary:active { transform: scale(0.96); }
-        
-        .btn-whatsapp { background: var(--whatsapp-green); color: white; margin-left: 10px; box-shadow: 0 8px 20px rgba(37, 211, 102, 0.25); }
-
-        /* --- HEADER --- */
-        header { 
-            background: rgba(255, 255, 255, 0.95); 
-            box-shadow: 0 4px 30px rgba(0,0,0,0.03); 
-            position: sticky; top: 0; z-index: 1000; 
-            backdrop-filter: blur(10px);
-        }
-        nav { display: flex; justify-content: space-between; align-items: center; min-height: 100px; padding: 10px 0; }
-        .logo img { height: 160px; width: auto; display: block; }
-        
-        .nav-right { display: flex; align-items: center; gap: 20px; }
-        .nav-links { display: flex; gap: 30px; align-items: center; }
-        .nav-links a { color: var(--text-main); font-weight: 500; font-size: 15px; position: relative; }
-        .nav-links a:hover { color: var(--primary-orange); }
-        
-        .lang-select {
-            padding: 8px 15px; border-radius: 20px; border: 1px solid #ddd;
-            background: #fff; font-family: 'Poppins', sans-serif; font-size: 0.9rem;
-            color: var(--primary-blue); cursor: pointer; outline: none;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05); font-weight: 600;
-        }
-
-        /* --- HERO SECTION --- */
-        .hero { 
-            background: linear-gradient(160deg, #003399 0%, #0f172a 100%);
-            background-size: cover; background-position: center; 
-            min-height: 85vh; padding: 140px 0 100px;
-            display: flex; align-items: center; text-align: center; color: var(--white); 
-            position: relative; overflow: hidden;
-            border-bottom-right-radius: 50px; border-bottom-left-radius: 50px;
-        }
-        .hero h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 20px; line-height: 1.15; }
-        .hero h2 { font-size: 1.4rem; font-weight: 300; margin-bottom: 30px; opacity: 0.9; }
-        .hero-text { max-width: 800px; margin: 0 auto 40px; font-size: 1.1rem; opacity: 0.9; line-height: 1.7; }
-
-        /* --- SECTION TITLES --- */
-        .section-title { text-align: center; margin-bottom: 60px; }
-        .section-title h2 { font-size: 2.2rem; color: var(--primary-blue); margin-bottom: 15px; font-weight: 700; position: relative; display: inline-block; }
-        .section-title h2::after {
-            content: ''; display: block; width: 60px; height: 4px; background: var(--primary-orange); margin: 10px auto 0; border-radius: 10px;
-        }
-        .section-title p { color: var(--text-light); max-width: 700px; margin: 0 auto; font-size: 1rem; }
-
-        /* --- CARDS --- */
-        .features-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; }
-        .feature-card { 
-            background: var(--white); padding: 35px 25px; border-radius: var(--radius-lg); 
-            box-shadow: var(--shadow-soft); text-align: center; 
-            border: 1px solid rgba(255,255,255,0.7);
-            flex: 1 1 250px; max-width: 350px; transition: transform 0.3s ease;
-            display: flex; flex-direction: column; align-items: center;
-        }
-        .feature-card:hover { transform: translateY(-10px); }
-        .feature-card h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 10px; color: #333; }
-        .feature-card p { font-size: 0.95rem; color: #666; }
-
-        /* --- SERVICES --- */
-        .services-container { max-width: 1000px; margin: 0 auto; display: grid; gap: 30px; }
-        .service-card { 
-            background: var(--white); padding: 40px; border-radius: var(--radius-lg); 
-            box-shadow: var(--shadow-soft); border-left: 6px solid var(--primary-blue);
-        }
-        .service-card h3 { font-size: 1.5rem; color: var(--primary-orange); margin-bottom: 20px; display: flex; align-items: center; gap: 15px; font-weight: 700; }
-        .service-list li { list-style: none; color: var(--text-light); margin-bottom: 10px; padding-left: 30px; position: relative; font-size: 1rem; }
-        .service-list li::before { 
-            content: '✔'; position: absolute; left: 0; color: var(--white); background: var(--whatsapp-green); 
-            width: 20px; height: 20px; border-radius: 50%; font-size: 11px; display: flex; align-items: center; justify-content: center; top: 3px;
-        }
-        .benefit-box { background: #eff6ff; padding: 15px 20px; border-radius: 12px; color: var(--primary-blue); font-weight: 600; display: block; border: 1px solid #dbeafe; margin-top: 20px; }
-
-        /* --- PROCESS --- */
-        .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
-        .process-step { background: var(--white); padding: 30px; border-radius: var(--radius-lg); box-shadow: var(--shadow-soft); position: relative; overflow: hidden; border-left: 5px solid var(--primary-orange); }
-        .process-step h4 { color: var(--primary-blue); margin-bottom: 5px; font-size: 1.2rem; }
-
-        /* --- FOUNDER (PREMIUM GLOW) --- */
-        .founder-wrapper { display: flex; align-items: center; gap: 60px; flex-wrap: wrap; margin-top: 40px; }
-        .founder-img { flex: 1; min-width: 300px; text-align: center; perspective: 1000px; }
-        
-        .founder-glow {
-            position: relative;
-            display: inline-block;
-            padding: 8px; 
-            background: linear-gradient(135deg, var(--primary-orange), var(--primary-blue));
-            border-radius: 35px;
-            box-shadow: 0 20px 50px rgba(0, 51, 153, 0.25);
-            animation: float 6s ease-in-out infinite; 
-        }
-        .founder-glow img { 
-            width: 100%; max-width: 380px; height: auto; 
-            border-radius: 28px; display: block;
-            border: 4px solid white; 
-        }
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-            100% { transform: translateY(0px); }
-        }
-
-        .founder-info { flex: 1; min-width: 300px; }
-        .founder-info h3 { font-size: 2.2rem; color: var(--primary-orange); line-height: 1.2; font-weight: 700; margin: 10px 0; }
-
-        /* --- WORK WITH US --- */
-        .work-section { background: var(--primary-gradient); color: var(--white); text-align: center; position: relative; overflow: hidden; border-radius: 30px; margin: 0 20px; }
-        .work-card { 
-            background: rgba(255,255,255,0.1); padding: 50px; border-radius: 30px; 
-            max-width: 1100px; margin: 40px auto; 
-            display: flex; align-items: center; justify-content: space-between; 
-            text-align: left; gap: 50px; 
-            border: 1px solid rgba(255,255,255,0.15); backdrop-filter: blur(10px);
-        }
-        .work-left { flex: 1; }
-        .work-right { flex: 1; background: rgba(0,0,0,0.2); padding: 40px; border-radius: 20px; }
-        .work-list li { list-style: none; margin-bottom: 12px; color: var(--white); display: flex; align-items: center; gap: 15px; font-size: 1.1rem; }
-        .work-list li::before { content: '•'; color: var(--primary-orange); font-size: 2rem; line-height: 0; }
-        
-        /* --- FAQ --- */
-        .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; max-width: 1000px; margin: 0 auto; }
-        .faq-item { 
-            background: var(--white); padding: 25px; border-radius: var(--radius-lg); 
-            box-shadow: var(--shadow-soft); transition: all 0.3s ease; cursor: pointer;
-            border-left: 5px solid var(--primary-blue);
-        }
-        .faq-item.active { background: #f0f9ff; border-left-color: var(--primary-orange); }
-        .faq-q { font-weight: 700; color: var(--primary-blue); display: flex; justify-content: space-between; align-items: center; font-size: 1.1rem; }
-        .faq-a { display: block; margin-top: 10px; color: var(--text-light); font-size: 0.95rem; }
-
-        /* --- CONTACT (Desktop) --- */
-        .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; }
-        .contact-row { 
-            display: flex; align-items: center; gap: 20px; margin-bottom: 20px; 
-            background: var(--white); padding: 25px; border-radius: 15px; 
-            box-shadow: var(--shadow-soft); transition: 0.3s;
-        }
-        .contact-row:hover { transform: translateX(5px); }
-        .contact-row i { color: var(--primary-orange); }
-        
-        /* Contact Icons */
-        .icon-contact { width: 50px; height: 50px; font-size: 1.4rem; margin: 0; flex-shrink: 0; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
-        .contact-icon-blue { background: #e3f2fd; color: var(--primary-blue); }
-        .contact-icon-orange { background: #fbe9e7; color: var(--primary-orange); }
-
-        .social-colored a { font-size: 3.5rem; margin: 0 15px; transition: 0.3s; display: inline-block; }
-        .social-colored .fa-instagram { color: #E1306C; }
-        .social-colored .fa-facebook { color: #1877F2; }
-        .social-colored .fa-youtube { color: #FF0000; }
-        .social-colored a:hover { transform: scale(1.1); }
-
-        /* --- FOOTER --- */
-        footer { background: var(--dark-bg); color: var(--white); padding: 80px 0 120px; text-align: center; }
-        .footer-socials a { 
-            color: rgba(255,255,255,0.6); font-size: 1.5rem; margin: 0 12px; 
-            width: 50px; height: 50px; line-height: 50px; display: inline-block;
-            background: rgba(255,255,255,0.05); border-radius: 50%; transition: 0.3s;
-        }
-        .footer-socials a:hover { background: var(--primary-orange); color: white; transform: translateY(-3px); }
-
-        /* --- 💻 FLOATING BUTTON (DESKTOP) --- */
-        .float-btn {
-            position: fixed; width: 60px; height: 60px; border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            color: white; font-size: 28px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3); z-index: 2000;
-            transition: transform 0.3s; cursor: pointer;
-        }
-        .float-btn:hover { transform: scale(1.1); }
-        .wa-float { bottom: 30px; right: 30px; background: var(--whatsapp-green); }
-
-        /* --- 📱 BOTTOM NAVIGATION (MOBILE ONLY) --- */
-        .bottom-nav {
-            display: none; /* Hidden on Desktop */
-            position: fixed; bottom: 0; left: 0; width: 100%;
+        /* =========================================
+           2. HEADER & NAV
+           ========================================= */
+        header {
             background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
-            box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
-            justify-content: space-around; align-items: center;
-            padding: 8px 0; z-index: 5000;
-            border-top: 1px solid rgba(0,0,0,0.05);
-            grid-template-columns: repeat(5, 1fr);
-            height: 70px;
-            align-items: end;
-            padding-bottom: 10px;
+            backdrop-filter: blur(15px);
+            position: sticky; top: 0; z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            height: 90px;
+            display: flex; align-items: center;
         }
-        .nav-item {
-            text-align: center; color: var(--text-light); font-size: 0.7rem; text-decoration: none;
-            display: flex; flex-direction: column; align-items: center; gap: 4px;
+        .nav-container {
+            display: flex; justify-content: space-between; align-items: center;
+            width: 100%;
         }
-        .nav-item i { font-size: 1.4rem; transition: 0.3s; }
-        .nav-item.active { color: var(--primary-blue); font-weight: 600; }
         
-        .nav-fab-container { display: flex; align-items: center; justify-content: center; height: 100%; }
-        .nav-fab {
-            background: var(--whatsapp-green); color: white;
-            width: 58px; height: 58px; border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
-            font-size: 2rem;
-            margin-top: -35px; /* Pops up */
-            border: 4px solid #f3f6f8;
-            animation: pulse-green 2s infinite;
+        .logo img { 
+            height: 100px; 
+            width: auto; 
+            display: block; 
+            margin-top: 5px;
+            transition: 0.3s;
         }
-        @keyframes pulse-green {
-            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-            70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+        .logo h2 { display: none; } 
+
+        .desktop-nav { display: flex; gap: 30px; }
+        .desktop-nav a { font-weight: 500; font-size: 0.95rem; color: var(--text-main); text-transform: uppercase; letter-spacing: 0.5px; }
+        .desktop-nav a:hover { color: var(--primary-orange); }
+
+        .nav-actions { display: flex; align-items: center; gap: 12px; }
+        #langSelect {
+            padding: 6px 12px; border-radius: 50px; border: 1px solid #ddd;
+            font-size: 0.85rem; outline: none; cursor: pointer; background: #fff; font-weight: 600; color: var(--primary-blue);
+        }
+
+        /* =========================================
+           3. MARQUEE (Thin Font)
+           ========================================= */
+        .marquee-wrapper {
+            background: var(--primary-orange); color: white; overflow: hidden; white-space: nowrap;
+            padding: 10px 0; font-weight: 500; font-size: 0.9rem; letter-spacing: 1px;
+            position: relative; z-index: 900; 
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        }
+        .marquee-content { display: inline-block; animation: scroll 25s linear infinite; }
+        @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+        /* =========================================
+           4. HERO SECTION
+           ========================================= */
+        .hero-section {
+            background: 
+                linear-gradient(135deg, rgba(0, 50, 160, 0.9) 0%, rgba(0, 20, 60, 0.9) 100%),
+                url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80'); 
+            background-size: cover; background-position: center;
+            color: white; padding: 80px 0 160px; text-align: center;
+            position: relative; clip-path: ellipse(150% 100% at 50% 0%); z-index: 1;
+        }
+        .hero-content h1 { font-size: 2.8rem; font-weight: 800; line-height: 1.2; margin-bottom: 15px; text-shadow: 0 10px 40px rgba(0,0,0,0.4); }
+        .hero-content h2 { font-size: 1.2rem; font-weight: 500; opacity: 1; margin-bottom: 25px; color: #eef2ff; }
+        .hero-content p { max-width: 800px; margin: 0 auto 35px; font-size: 1.05rem; opacity: 0.95; font-weight: 400; }
+        .trust-badge {
+            display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.15); padding: 8px 25px; border-radius: 50px;
+            font-size: 0.9rem; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.3); backdrop-filter: blur(10px); color: #fff; font-weight: 600;
+        }
+        .hero-buttons { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+        
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+            padding: 12px 35px; border-radius: 50px; font-weight: 600; cursor: pointer; transition: all 0.3s;
+            font-size: 0.95rem; border: none; letter-spacing: 0.5px;
+        }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+        .btn-primary { background: linear-gradient(135deg, #ff5722 0%, #ff8c00 100%); color: white; }
+        
+        /* Pulse Animation for WhatsApp */
+        .btn-whatsapp { background: var(--whatsapp-color); color: white; animation: pulse 2s infinite; }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
             100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
 
         /* =========================================
-           🚀 MOBILE PRO OPTIMIZATIONS
+           5. STATS BAR (ANIMATED)
            ========================================= */
-        @media (max-width: 992px) {
-            
-            body { padding-bottom: 90px; }
-            .bottom-nav { display: grid; }
-            .float-btn { display: none; } 
-            .nav-links { display: none !important; } 
-            
-            header { padding: 10px 0; }
-            nav { min-height: 80px; justify-content: center; position: relative; } 
-            .logo img { height: 100px; }
-            
-            .nav-right { position: absolute; right: 15px; top: 18px; }
-            .lang-select { padding: 5px 10px; font-size: 0.8rem; }
+        .stats-section { margin-top: -80px; position: relative; z-index: 10; padding-bottom: 40px; }
+        .stats-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); background: white; border-radius: var(--radius-xl);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1); padding: 30px; max-width: 900px; margin: 0 auto; text-align: center; border: 1px solid rgba(0,0,0,0.05);
+        }
+        .stat-item h3 { font-size: 2.2rem; color: var(--primary-blue); font-weight: 800; margin-bottom: 2px; }
+        .stat-item p { font-size: 0.9rem; color: #555; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+        .border-l-r { border-left: 1px solid #eee; border-right: 1px solid #eee; }
 
-            .hero { padding: 80px 0 50px; text-align: left; border-radius: 0 0 25px 25px; }
-            .hero h1 { font-size: 1.8rem; margin-bottom: 10px; }
-            .hero h2 { font-size: 0.95rem; margin-bottom: 20px; line-height: 1.4; }
-            .hero-text { display: block; font-size: 0.9rem; margin-bottom: 20px; opacity: 0.9; } 
-            
-            .hero-buttons { 
-                display: flex; flex-direction: column; align-items: center; gap: 15px; width: 100%;
-            }
-            .hero .btn { width: 90%; height: 50px; font-size: 0.95rem; justify-content: center; margin: 0 auto; }
+        /* =========================================
+           6. WHO WE HELP
+           ========================================= */
+        .section-header h2 { font-size: 2.2rem; color: var(--primary-blue); font-weight: 800; margin-bottom: 10px; }
+        .divider { height: 5px; width: 70px; background: var(--primary-orange); margin: 0 auto 40px; border-radius: 10px; }
+        
+        .wwh-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+        .wwh-card {
+            background: white; padding: 30px 15px; border-radius: var(--radius-xl); text-align: center; box-shadow: var(--shadow-card);
+            transition: all 0.3s; border: 1px solid #e2e8f0; position: relative; overflow: hidden; flex: 1 1 300px; max-width: 350px;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+        }
+        .wwh-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: var(--primary-blue); transform: scaleX(0); transition: 0.3s; transform-origin: left; }
+        .wwh-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,68,204,0.15); }
+        .wwh-card:hover::before { transform: scaleX(1); }
+        .wwh-card i { font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 15px; display: block; }
+        .wwh-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--text-main); }
 
-            .section-padding { padding: 40px 0; }
-            .section-title { margin-bottom: 25px; text-align: left; }
-            .section-title::after { margin: 10px 0 0 0; }
-            .section-title h2 { font-size: 1.6rem; }
-            .section-title p { text-align: left; font-size: 0.9rem; }
+        /* =========================================
+           7. PROBLEM & SOLUTION
+           ========================================= */
+        .prob-sol-container { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .ps-box { background: white; border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-card); height: 100%; }
+        
+        .ps-header { padding: 25px; text-align: center; font-weight: 800; font-size: 1.4rem; letter-spacing: 0.5px; color:white; }
+        .ps-header.red { background: linear-gradient(135deg, #ef4444, #b91c1c); }
+        .ps-header.green { background: linear-gradient(135deg, #22c55e, #15803d); }
+        .badge-icon { font-size: 1.8rem; margin-bottom: 8px; display: block; opacity: 0.95; }
 
-            .features-grid, .services-container, .contact-grid, .process-grid { grid-template-columns: 1fr; gap: 15px; }
-            
-            .feature-card { 
-                max-width: 100%; align-items: flex-start; text-align: left; padding: 20px;
-                background: var(--white); border: none; box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-                border-left: 4px solid var(--primary-orange); border-radius: 12px; border-top: none; border-bottom: none; border-right: none;
-            }
-            
-            /* Professional Icons on Mobile */
-            .icon-box { margin: 0 0 15px 0; width: 60px; height: 60px; font-size: 1.5rem; }
-            
-            .service-card { padding: 20px; }
-            .service-card h3 { font-size: 1.3rem; }
-            .service-list li { font-size: 0.9rem; margin-bottom: 6px; }
+        .ps-list { padding: 30px; }
+        .ps-list li { margin-bottom: 15px; display: flex; align-items: flex-start; gap: 12px; font-size: 0.95rem; line-height: 1.5; color: var(--text-main); font-weight: 500; }
+        .icon-bullet-red { color: #dc2626; font-size: 1.2rem; margin-top: 2px; }
+        
+        .sol-desc { padding: 30px 20px 5px; font-size: 1.1rem; font-weight: 700; color: var(--primary-blue); text-align: center; }
+        .sol-grid { display: flex; justify-content: space-around; padding: 30px 15px; }
+        .sol-item { display: flex; flex-direction: column; align-items: center; gap: 8px; font-weight: 700; font-size: 0.9rem; color: #16a34a; }
+        .sol-item i { font-size: 2rem; background: #dcfce7; padding: 15px; border-radius: 50%; transition: 0.3s; }
+        .sol-item:hover i { transform: scale(1.1); box-shadow: 0 5px 15px rgba(22,163,74,0.3); }
 
-            .founder-wrapper { flex-direction: column-reverse; gap: 30px; }
-            .founder-img { width: 100%; padding: 0 10px; }
-            .founder-glow { padding: 5px; } /* Smaller glow on mobile */
-            .founder-info { text-align: left; }
-            .founder-info h3 { font-size: 1.6rem; margin-bottom: 10px; }
+        /* =========================================
+           8. ABOUT & FOUNDER
+           ========================================= */
+        .about-wrapper { display: flex; align-items: flex-start; gap: 40px; flex-wrap: wrap; }
+        .about-text { flex: 1; min-width: 300px; }
+        #aboutDesc strong { color: var(--primary-blue); font-size: 1.1rem; display: block; margin-top: 15px; margin-bottom: 5px; font-weight: 800; }
+        #aboutDesc { font-size: 1rem; color: var(--text-light); line-height: 1.7; }
 
-            .work-section { margin: 0; border-radius: 0; }
-            .work-card { flex-direction: column; padding: 20px; border-radius: 15px; text-align: center; }
-            .work-left, .work-right { width: 100%; }
-            .work-right { padding: 15px; margin-top: 15px; }
-            .work-list { display: inline-block; text-align: left; margin: 0 auto; width: 100%; }
-            .work-list li { justify-content: flex-start; font-size: 0.95rem; }
-
-            .faq-grid { grid-template-columns: 1fr; gap: 12px; }
-            .faq-item { padding: 15px; }
-            .faq-q { font-size: 0.95rem; }
-            .faq-a { display: none; margin-top: 8px; color: #555; font-size: 0.9rem; } 
-            .faq-item.active .faq-a { display: block; animation: fadeIn 0.3s ease; }
-            
-            /* FIXED MOBILE CONTACT LAYOUT */
-            .contact-row {
-                display: flex;
-                flex-direction: row; /* Side by side */
-                align-items: center; /* Center align items vertically */
-                justify-content: flex-start;
-                padding: 15px;
-                gap: 15px; /* Space between icon and text */
-            }
-            /* Fixed Icon Size for Mobile */
-            .contact-row .icon-contact {
-                width: 45px; height: 45px; font-size: 1.2rem;
-                min-width: 45px; /* Prevent shrinking */
-                margin: 0;
-            }
-            /* Text Alignment */
-            .contact-row div {
-                text-align: left;
-                width: 100%;
-                font-size: 0.9rem;
-                line-height: 1.3;
-                word-break: break-word; /* Handle long emails */
-            }
-
-            .social-colored a { font-size: 2.2rem; margin: 0 10px; }
-            .hidden-desktop { display: flex; }
+        .founder-card {
+            flex: 1; min-width: 320px; background: linear-gradient(145deg, #ffffff, #f0f4ff); 
+            padding: 30px; border-radius: var(--radius-xl); box-shadow: 0 15px 40px rgba(0,0,0,0.08); 
+            border: 1px solid #dbeafe; display: flex; align-items: center; gap: 20px; 
         }
         
-        /* Animation for Scroll */
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .founder-img-box {
+            width: 220px; height: 220px; flex-shrink: 0; border-radius: 15px; overflow: hidden;
+            border: 5px solid var(--white); box-shadow: 0 10px 25px rgba(0,0,0,0.15); animation: float 6s ease-in-out infinite; 
+        }
+        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-8px); } 100% { transform: translateY(0px); } }
+        .founder-img-box img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+
+        .founder-info-block { flex-grow: 1; text-align: left; }
+        .founder-info-block h3 { font-size: 1.6rem; color: #000; margin: 10px 0 5px; font-weight: 800; line-height: 1.2; }
+        .role { color: var(--primary-orange); font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; }
+        .bio { font-size: 0.95rem; color: #444; margin-top: 10px; line-height: 1.6; font-weight: 400; }
+        .badge { background: #e0f2fe; color: var(--primary-blue); display: inline-block; padding: 5px 12px; border-radius: 5px; font-size: 0.8rem; text-transform: uppercase; font-weight: 800; letter-spacing: 0.5px; }
+        .social-links { margin-top: 15px; }
+        .social-links a { color: #555; font-size: 1.5rem; margin-right: 15px; transition: 0.3s; }
+        .social-links a:hover { color: var(--primary-blue); transform: translateY(-3px); }
+
+        /* =========================================
+           9. SERVICES
+           ========================================= */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .service-card {
+            background: white; padding: 35px 25px; border-radius: var(--radius-lg); box-shadow: var(--shadow-card); transition: 0.4s; position: relative; overflow: hidden;
+            border-bottom: 4px solid transparent; height: 100%; display: flex; flex-direction: column;
+        }
+        .service-card:hover { transform: translateY(-5px); border-bottom-color: var(--primary-orange); box-shadow: 0 20px 40px rgba(0,51,153,0.1); }
+        
+        .icon-circle {
+            width: 60px; height: 60px; border-radius: 12px; display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem; margin-bottom: 20px; background: #f8fafc; color: var(--primary-blue); box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.3s;
+        }
+        .service-card:hover .icon-circle { background: var(--primary-blue); color: white; transform: rotate(5deg); }
+
+        .service-card h3 { font-size: 1.3rem; margin-bottom: 12px; font-weight: 800; color: var(--text-main); }
+        .service-details { margin-bottom: auto; }
+        .service-details li { list-style: none; font-size: 0.9rem; color: var(--text-light); margin-bottom: 6px; position: relative; padding-left: 18px; font-weight: 500; }
+        .service-details li::before { content: '•'; color: var(--primary-orange); font-size: 1.5rem; position: absolute; left: 0; top: -6px; }
+        
+        .s-benefit { font-size: 0.85rem; color: var(--primary-dark); font-weight: 700; background: #f1f5f9; padding: 10px; border-radius: 8px; text-align: center; border: 1px solid #e2e8f0; margin-top: 15px; }
+        
+        .full-width { grid-column: 1 / -1; display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 40px; max-width: 800px; margin: 0 auto; width: 100%; }
+
+        /* =========================================
+           10. WHY CHOOSE US
+           ========================================= */
+        .why-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+        .why-item { 
+            flex: 1 1 200px; text-align: center; max-width: 250px; padding: 30px 20px; 
+            background: white; border-radius: var(--radius-lg); box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: 0.3s; border: 1px solid #f0f0f0;
+        }
+        .why-item:hover { transform: translateY(-5px); box-shadow: var(--shadow-card); border-color: var(--primary-blue); }
+        .why-item i { 
+            font-size: 3rem; margin-bottom: 20px; background: linear-gradient(135deg, #ff9100, #ff5722); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 8px 12px rgba(255, 87, 34, 0.2)); display: block; transition: 0.3s;
+        }
+        .why-item:hover i { transform: scale(1.1); }
+        .why-item h4 { margin-bottom: 8px; color: var(--primary-blue); font-size: 1.2rem; font-weight: 800; }
+        .why-item p { font-size: 0.9rem; color: #555; }
+
+        /* =========================================
+           11. REVIEWS (REAL GOOGLE STYLE)
+           ========================================= */
+        .review-section { background: #f1f5f9; padding: 60px 0; overflow: hidden; }
+        .review-card { 
+            max-width: 700px; margin: 0 auto; background: white; padding: 40px; 
+            border-radius: var(--radius-xl); box-shadow: var(--shadow-card); 
+            text-align: left; border: 1px solid #e2e8f0; position: relative;
+            min-height: 230px; display: flex; flex-direction: column; justify-content: space-between;
+        }
+        
+        .google-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; border-bottom: 1px solid #f0f0f0; padding-bottom: 15px; }
+        .reviewer-info { display: flex; align-items: center; gap: 15px; }
+        .reviewer-avatar { width: 45px; height: 45px; border-radius: 50%; background: var(--primary-blue); color: white; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: 700; }
+        .reviewer-name { font-weight: 700; color: #000; font-size: 1.1rem; display: block; }
+        .reviewer-date { font-size: 0.8rem; color: var(--text-light); }
+        .google-logo { width: 25px; }
+
+        .stars { color: #fbbc05; font-size: 1.2rem; margin-bottom: 15px; letter-spacing: 2px; }
+        
+        .review-slide { display: none; animation: fadeEffect 1s ease-in-out; }
+        .review-slide.active { display: block; }
+        @keyframes fadeEffect { from { opacity: 0; transform: scale(0.98); } to { opacity: 1; transform: scale(1); } }
+        
+        .review-text { font-size: 1.15rem; color: #333; line-height: 1.6; }
+        
+        .review-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; }
+        .review-link { color: #1a73e8; font-weight: 600; text-decoration: none; font-size: 0.95rem; }
+        .review-link:hover { text-decoration: underline; }
+        
+        .slider-dots { display: flex; gap: 8px; }
+        .dot { width: 8px; height: 8px; background: #cbd5e1; border-radius: 50%; cursor: pointer; transition: 0.3s; }
+        .dot.active { background: var(--primary-blue); transform: scale(1.3); }
+
+        /* =========================================
+           12. WORK WITH US
+           ========================================= */
+        .bg-light-blue { background: #eef2ff; } 
+        .work-grid {
+            display: grid; grid-template-columns: 1fr 1.2fr; gap: 0;
+            border-radius: var(--radius-xl); overflow: hidden; background: white; box-shadow: 0 15px 40px rgba(0,0,0,0.08); 
+        }
+        .work-img { background: url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80') center/cover; min-height: 400px; }
+        .work-content { padding: 50px 40px; text-align: left; display: flex; flex-direction: column; justify-content: center; }
+        .work-content h2 { color: var(--primary-blue); font-size: 2.2rem; margin-bottom: 8px; font-weight: 800; }
+        .warning-box { display: inline-block; background: #fff1f2; color: #e11d48; padding: 8px 12px; border-radius: 6px; margin: 15px 0; font-size: 0.85rem; border: 1px solid #fecdd3; font-weight: 600; }
+        .roles { font-size: 1rem; margin-bottom: 25px; color: var(--text-light); }
+        .roles li { list-style: none; margin-bottom: 6px; font-weight: 600; }
+        .roles li::before { content: '👉'; margin-right: 10px; color: var(--primary-orange); }
+        .btn-outline { border: 2px solid var(--primary-blue); color: var(--primary-blue); background: transparent; align-self: flex-start; padding: 10px 30px; border-radius: 50px; font-weight: 700; font-size: 0.95rem; }
+        .btn-outline:hover { background: var(--primary-blue); color: white; }
+
+        /* =========================================
+           13. FAQ
+           ========================================= */
+        .faq-item { background: white; margin-bottom: 12px; border-radius: 10px; overflow: hidden; border: 1px solid #e2e8f0; transition: 0.3s; }
+        .faq-q { background-color: #f8fafc; padding: 18px 25px; cursor: pointer; font-weight: 700; display: flex; justify-content: space-between; align-items: center; font-size: 1rem; color: var(--text-main); transition: 0.3s; }
+        .faq-q:hover { background-color: #e0f2fe; color: var(--primary-blue); }
+        .faq-a { padding: 0 25px; max-height: 0; overflow: hidden; transition: 0.3s ease; color: var(--text-light); font-size: 0.95rem; line-height: 1.6; background: white; }
+        .faq-item.active { border-color: var(--primary-blue); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .faq-item.active .faq-a { padding: 15px 25px; max-height: 200px; }
+        .faq-item.active .faq-q { color: var(--primary-blue); background: white; border-bottom: 1px solid #f1f5f9; }
+        .faq-item.active i { transform: rotate(180deg); }
+
+        /* =========================================
+           14. ENQUIRY
+           ========================================= */
+        .enquiry-wrapper { position: relative; top: 50px; z-index: 10; margin-bottom: 0; }
+        .enquiry-card {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.98) 100%); 
+            padding: 50px 30px; border-radius: var(--radius-xl); text-align: center; color: white; box-shadow: 0 30px 80px rgba(0,0,0,0.25);
+            max-width: 900px; margin: 0 auto; border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(15px);
+        }
+        .enquiry-card h2 { font-size: 2.2rem; font-weight: 800; margin-bottom: 30px; color: var(--white); }
+        .enquiry-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-bottom: 35px; max-width: 800px; margin-left: auto; margin-right: auto; }
+        .check-item { 
+            background: rgba(255,255,255,0.08); padding: 12px 18px; border-radius: 8px; font-size: 0.95rem; font-weight: 500; display: flex; align-items: center; gap: 10px;
+            border: 1px solid rgba(255,255,255,0.15); transition: 0.3s; flex: 0 1 260px; text-align: left;
+        }
+        .check-item:hover { background: rgba(255,255,255,0.2); transform: translateX(5px); }
+        .check-item i { color: #4ade80; font-size: 1.1rem; }
+        .btn-glow { 
+            background: var(--primary-orange); color: white; font-weight: 800; box-shadow: 0 0 20px rgba(255, 87, 34, 0.5); padding: 15px 45px; border-radius: 50px; font-size: 1rem;
+            text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; display: inline-block;
+        }
+        .btn-glow:hover { box-shadow: 0 0 40px rgba(255, 87, 34, 0.8); transform: translateY(-5px); }
+
+        /* =========================================
+           15. FOOTER
+           ========================================= */
+        footer { background: #000; color: white; padding: 120px 0 30px; margin-top: -60px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
+        .footer-info h3 { color: var(--primary-orange); margin-bottom: 15px; font-size: 1.5rem; font-weight: 800; }
+        .footer-contacts p { margin-bottom: 10px; display: flex; align-items: center; gap: 12px; font-size: 0.95rem; opacity: 0.85; transition: 0.3s; }
+        .footer-contacts p:hover { color: var(--primary-orange); opacity: 1; }
+        .footer-social { display: flex; justify-content: center; width: 100%; margin-top: 20px; }
+        .footer-social a { 
+            color: white; font-size: 1.4rem; margin: 0 10px; opacity: 0.7; transition: 0.3s; background: rgba(255,255,255,0.1); width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%;
+        }
+        .footer-social a:hover { opacity: 1; background: var(--primary-orange); transform: translateY(-3px); }
+        .copyright { text-align: center; font-size: 0.85rem; opacity: 0.5; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 25px; display: block; width: 100%; margin-top: 15px; }
+
+        /* =========================================
+           16. SCROLL REVEAL ANIMATION CLASSES
+           ========================================= */
+        .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* =========================================
+           17. FLOATING BTNS & MOBILE
+           ========================================= */
+        .bottom-nav { display: none; }
+        
+        /* Desktop Float WhatsApp */
+        .float-btn {
+            position: fixed; bottom: 20px; right: 20px; width: 55px; height: 55px; background: var(--whatsapp-color);
+            color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-size: 2rem; box-shadow: 0 4px 15px rgba(37,211,102,0.4); z-index: 99; transition: transform 0.3s;
+            animation: pulse 2s infinite;
+        }
+        .float-btn:hover { transform: scale(1.1); animation: none; }
+        
+        /* Back to Top Button */
+        #backToTop {
+            position: fixed; bottom: 20px; left: 20px; width: 45px; height: 45px; background: var(--primary-blue);
+            color: white; border: none; border-radius: 50%; font-size: 1.2rem; display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,68,204,0.4); cursor: pointer; z-index: 99; opacity: 0; visibility: hidden; transition: 0.3s;
+        }
+        #backToTop.show { opacity: 1; visibility: visible; }
+        #backToTop:hover { background: var(--primary-orange); transform: translateY(-5px); }
+
+        @media (max-width: 992px) {
+            .full-width { flex-direction: column; gap: 20px; padding: 30px 20px; }
+            .work-grid { grid-template-columns: 1fr; }
+            .work-img { min-height: 220px; }
+            .work-content { padding: 30px 20px; }
+            .founder-card { flex-direction: column; align-items: center; text-align: center; }
+            .founder-info-block { text-align: center; }
+        }
+
+        @media (max-width: 768px) {
+            body { font-size: 14px; } 
+            .section-padding { padding: 40px 0; }
+            .hidden-desktop { display: none !important; }
+            .desktop-nav { display: none; }
+            header { height: 70px; }
+            .logo img { height: 60px; margin-top: 5px; } 
+
+            .hero-section { text-align: left; padding: 60px 0 100px; }
+            .hero-content h1 { font-size: 1.8rem; } 
+            .hero-content h2 { font-size: 1rem; margin-bottom: 20px; }
+            .hero-content p { font-size: 0.95rem; }
+            .hero-buttons { justify-content: flex-start; gap: 10px; }
+            .btn { width: 100%; padding: 12px; font-size: 0.9rem; }
+            
+            .stats-section { margin-top: -80px; padding-bottom: 30px; }
+            .stats-grid { grid-template-columns: 1fr; gap: 10px; padding: 20px; }
+            .border-l-r { border: none; border-top: 1px solid #eee; border-bottom: 1px solid #eee; padding: 15px 0; }
+            
+            .prob-sol-container { grid-template-columns: 1fr; gap: 20px; }
+            .founder-card { padding: 25px 15px; }
+            .founder-img-box { width: 140px; height: 140px; } 
+            .founder-details h3 { font-size: 1.5rem; }
+
+            .enquiry-card { padding: 30px 15px; }
+            .enquiry-grid { grid-template-columns: 1fr; gap: 10px; }
+            .check-item { font-size: 0.9rem; padding: 10px; width: 100%; }
+            .enquiry-card h2 { font-size: 1.6rem; }
+            
+            /* Remove float btns on mobile completely */
+            .float-btn { display: none !important; }
+            #backToTop { display: none !important; }
+
+            /* MOBILE: 7th Box Override to match standard cards */
+            .full-width {
+                grid-column: auto !important; 
+                display: flex !important; flex-direction: column !important;
+                gap: 0 !important; max-width: 100% !important; margin: 0 !important; width: auto !important;
+                align-items: stretch !important; padding: 35px 25px !important;
+            }
+            .full-width div { width: 100%; text-align: left; }
+            .full-width .icon-circle { margin-bottom: 20px; align-self: center; } 
+            .full-width h3 { text-align: left; width: 100%; } 
+            .full-width .service-details { margin-bottom: auto; }
+            .full-width .s-benefit { margin-top: 15px; width: 100%; box-sizing: border-box; }
+
+            .footer-info h3, .footer-info p#footerTag { text-align: center; display: block; width: 100%; }
+
+            .bottom-nav {
+                display: flex; position: fixed; bottom: 0; left: 0; width: 100%;
+                background: white; height: 65px; box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+                justify-content: space-around; align-items: flex-end; padding-bottom: 8px; z-index: 1000;
+            }
+            .nav-item { display: flex; flex-direction: column; align-items: center; font-size: 0.7rem; color: var(--text-light); gap: 3px; width: 20%; }
+            .nav-item i { font-size: 1.3rem; }
+            .nav-item.active { color: var(--primary-blue); font-weight: 700; }
+            .nav-fab-container { position: relative; width: 20%; display: flex; justify-content: center; }
+            .nav-fab {
+                position: absolute; bottom: 15px; width: 55px; height: 55px; background: var(--whatsapp-color); border-radius: 50%;
+                display: flex; align-items: center; justify-content: center; color: white;
+                font-size: 1.8rem; border: 5px solid #f8fafc; box-shadow: 0 -5px 10px rgba(0,0,0,0.1);
+                animation: pulse 2s infinite;
+            }
+            .flip-icon { transform: scaleX(-1); }
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="container">
-            <nav>
-                <div class="logo">
-                    <img src="logo.png" alt="Pratishtha Digital Solutions">
-                </div>
-                
-                <div class="nav-right">
-                    <select class="lang-select" onchange="changeLanguage(this.value)">
-                        <option value="en">🌐 English</option>
-                        <option value="hi">🌐 हिंदी</option>
-                        <option value="mr">🌐 मराठी</option>
-                    </select>
-
-                    <div class="nav-links">
-                        <a href="#home" id="navHome">Home</a>
-                        <a href="#about" id="navAbout">About</a>
-                        <a href="#services" id="navServices">Services</a>
-                        <a href="#work" id="navWork">Work With Us</a>
-                        <a href="#contact" class="btn btn-primary" id="navGetStarted">Get Started</a>
-                    </div>
-                </div>
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="logo.png" alt="Pratishtha Digital" onerror="this.style.display='none'; document.querySelector('.logo h2').style.display='block';">
+                <h2>Pratishtha</h2>
+            </div>
+            <nav class="desktop-nav">
+                <a href="#home" id="navHome">Home</a>
+                <a href="#about" id="navAbout">About</a>
+                <a href="#services" id="navServices">Services</a>
+                <a href="#work" id="navWork">Work With Us</a>
             </nav>
+            <div class="nav-actions">
+                <select id="langSelect" onchange="changeLanguage(this.value)">
+                    <option value="en">English</option>
+                    <option value="hi">हिंदी</option>
+                    <option value="mr">मराठी</option>
+                </select>
+                <a href="#contact" class="btn btn-primary hidden-mobile" id="navContact">Contact</a>
+            </div>
         </div>
     </header>
 
-    <section id="home" class="hero">
-        <div class="container animate-up">
+    <div class="marquee-wrapper">
+        <div class="marquee-content">
+            DIGITAL REPUTATION • BRANDING • SOCIAL MEDIA • GOOGLE REVIEWS • WEB DEVELOPMENT • POLITICAL CAMPAIGNS • 
+            DIGITAL REPUTATION • BRANDING • SOCIAL MEDIA • GOOGLE REVIEWS • WEB DEVELOPMENT • POLITICAL CAMPAIGNS • 
+        </div>
+    </div>
+
+    <section id="home" class="hero-section">
+        <div class="container hero-content reveal">
             <h1 id="heroTitle">Building Reputation.<br>Creating Impact.</h1>
-            <h2 id="heroSubtitle">Digital Presence & Reputation Solutions for Businesses & Professionals.</h2>
-            
-            <div class="hero-text">
-                <p id="heroText">Pratishtha Digital Solutions is a digital consulting firm based in Maharashtra, India. We help businesses and individuals build a strong online presence, improve reputation, and create a trusted digital identity. In today’s world, people search online before they decide. We ensure that when someone finds your business, they see professionalism, credibility, and trust.</p>
+            <h2 id="heroSub">Professional Digital Presence & Reputation Solutions.</h2>
+            <p id="heroDesc">Pratishtha Digital Solutions is a digital consulting firm based in Maharashtra, India. We help businesses and individuals build a strong online presence, improve reputation, and create a trusted digital identity.</p>
+            <div class="trust-badge">
+                <i class="fas fa-shield-alt"></i> <span id="heroTrust">Trusted Digital Partner for Growing Businesses in Maharashtra.</span>
             </div>
-            
             <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary" id="btnStarted">Get Started Now <i class="fas fa-arrow-right"></i></a>
-                <a href="https://wa.me/919420250546" class="btn btn-whatsapp" id="btnWhatsapp">Chat on WhatsApp <i class="fab fa-whatsapp"></i></a>
+                <a href="#contact" class="btn btn-primary" id="btnStart">Start Your Journey <i class="fas fa-arrow-right"></i></a>
+                <a href="https://wa.me/919420250546" class="btn btn-whatsapp" id="btnChat" target="_blank">Chat on WhatsApp <i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section reveal" id="statsArea">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3><span class="counter" data-target="100">0</span>%</h3>
+                    <p id="stat1Label">Client Satisfaction</p>
+                </div>
+                <div class="stat-item border-l-r">
+                    <h3><span class="counter" data-target="5.0">0.0</span> <i class="fas fa-star" style="color: #f59e0b; font-size: 1.8rem;"></i></h3>
+                    <p id="stat2Label">Google Rating</p>
+                </div>
+                <div class="stat-item">
+                    <h3><span class="counter" data-target="24">0</span>/7</h3>
+                    <p id="stat3Label">Support</p>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="section-padding">
-        <div class="container reveal">
-            <div class="section-title">
-                <h2 id="offerTitle">What We Offer</h2>
-                <p id="offerSubtitle">Comprehensive solutions for your digital growth.</p>
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <h2 id="wwhTitle">Who We Help</h2>
+                <div class="divider"></div>
             </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="icon-box icon-blue"><i class="fab fa-google"></i></div>
-                    <h3 id="feat1">Google Presence</h3>
+            <div class="wwh-grid">
+                <div class="wwh-card reveal"><i class="fas fa-store"></i><h3 id="wwh1">Local Businesses</h3></div>
+                <div class="wwh-card reveal"><i class="fas fa-user-doctor"></i><h3 id="wwh2">Clinics & Hospitals</h3></div>
+                <div class="wwh-card reveal"><i class="fas fa-utensils"></i><h3 id="wwh3">Restaurants</h3></div>
+                <div class="wwh-card reveal"><i class="fas fa-city"></i><h3 id="wwh4">Real Estate</h3></div>
+                <div class="wwh-card reveal"><i class="fas fa-landmark"></i><h3 id="wwh5">Politicians / Social</h3></div>
+                <div class="wwh-card reveal"><i class="fas fa-graduation-cap"></i><h3 id="wwh6">Institutes</h3></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background: white;" id="prob-sol">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <h2 id="psTitle">Why Businesses Lose Customers Online?</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="prob-sol-container">
+                <div class="ps-box reveal">
+                    <div class="ps-header red">
+                        <i class="fas fa-exclamation-triangle badge-icon"></i>
+                        <span id="probTitle">The Problem</span>
+                    </div>
+                    <ul class="ps-list">
+                        <li><i class="fas fa-times-circle icon-bullet-red"></i> <span id="prob1">Low Google reviews or negative rating.</span></li>
+                        <li><i class="fas fa-times-circle icon-bullet-red"></i> <span id="prob2">No online visibility when searched.</span></li>
+                        <li><i class="fas fa-times-circle icon-bullet-red"></i> <span id="prob3">Weak digital identity compared to competitors.</span></li>
+                        <li><i class="fas fa-times-circle icon-bullet-red"></i> <span id="prob4">Inactive social media presence.</span></li>
+                    </ul>
                 </div>
-                <div class="feature-card">
-                    <div class="icon-box icon-orange"><i class="fab fa-instagram"></i></div>
-                    <h3 id="feat2">Social Media</h3>
-                </div>
-                <div class="feature-card">
-                    <div class="icon-box icon-blue"><i class="fas fa-user-tie"></i></div>
-                    <h3 id="feat3">Personal Branding</h3>
-                </div>
-                <div class="feature-card">
-                    <div class="icon-box icon-orange"><i class="fas fa-fingerprint"></i></div>
-                    <h3 id="feat4">Digital Identity</h3>
-                </div>
-                <div class="feature-card">
-                    <div class="icon-box icon-blue"><i class="fas fa-bullhorn"></i></div>
-                    <h3 id="feat5">Event Promotion</h3>
+                <div class="ps-box sol-box reveal">
+                    <div class="ps-header green">
+                        <i class="fas fa-shield-check badge-icon"></i>
+                        <span id="solTitle">Our Solution</span>
+                    </div>
+                    <p class="sol-desc" id="solDesc">We build a strong digital presence.</p>
+                    <div class="sol-grid">
+                        <div class="sol-item"><i class="fas fa-shield-alt"></i><span id="sol1">More Trust</span></div>
+                        <div class="sol-item"><i class="fas fa-eye"></i><span id="sol2">More Visibility</span></div>
+                        <div class="sol-item"><i class="fas fa-comments"></i><span id="sol3">More Inquiries</span></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section-padding" style="background: var(--white);">
-        <div class="container reveal">
-            <div class="section-title">
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="about-wrapper">
+                <div class="about-text reveal">
+                    <div class="section-header">
+                        <h2 id="aboutTitle">About Us</h2>
+                        <div class="divider" style="margin: 0 0 20px;"></div>
+                    </div>
+                    <div id="aboutDesc"></div>
+                </div>
+                
+                <div class="founder-card reveal">
+                    <div class="founder-img-box">
+                        <img src="founder.jpeg" alt="Arjunkumar" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3135/3135715.png'">
+                    </div>
+                    <div class="founder-info-block">
+                        <span class="badge" id="meetFounder">Meet the Founder</span>
+                        <h3>Arjunkumar S Udawant</h3>
+                        <p class="role" id="founderRole">Founder & Digital Strategist</p>
+                        <p class="bio" id="founderBio">Arjunkumar S Udawant is a digital presence strategist focused on building strong and trusted digital identities for businesses and professionals.</p>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/arjunkumarudawant" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/arjunkumarudawant" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section-padding" style="background: white;">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <h2 id="servTitle">Our Services</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal"><div class="icon-circle blue"><i class="fab fa-google"></i></div><h3 id="s1Title">Google Business Profile</h3><div class="service-details" id="s1Details"></div><div class="s-benefit">✨ <span id="s1Ben">Benefit: Trust & Visibility.</span></div></div>
+                <div class="service-card reveal"><div class="icon-circle orange"><i class="fab fa-instagram"></i></div><h3 id="s2Title">Social Media Management</h3><div class="service-details" id="s2Details"></div><div class="s-benefit">✨ <span id="s2Ben">Benefit: Brand Recall.</span></div></div>
+                <div class="service-card reveal"><div class="icon-circle blue"><i class="fas fa-play"></i></div><h3 id="s3Title">Reels & Short Video</h3><div class="service-details" id="s3Details"></div><div class="s-benefit">✨ <span id="s3Ben">Benefit: High Reach.</span></div></div>
+                <div class="service-card reveal"><div class="icon-circle orange"><i class="fas fa-user-tie"></i></div><h3 id="s4Title">Personal Branding</h3><div class="service-details" id="s4Details"></div><div class="s-benefit">✨ <span id="s4Ben">Benefit: Influence.</span></div></div>
+                <div class="service-card reveal"><div class="icon-circle blue"><i class="fas fa-calendar-alt"></i></div><h3 id="s5Title">Event Promotion</h3><div class="service-details" id="s5Details"></div><div class="s-benefit">✨ <span id="s5Ben">Benefit: Recognition.</span></div></div>
+                <div class="service-card reveal"><div class="icon-circle orange"><i class="fas fa-laptop-code"></i></div><h3 id="s6Title">Website & Identity</h3><div class="service-details" id="s6Details"></div><div class="s-benefit">✨ <span id="s6Ben">Benefit: Credibility.</span></div></div>
+                
+                <div class="service-card full-width reveal">
+                    <div class="icon-circle green"><i class="fab fa-whatsapp"></i></div>
+                    <div>
+                        <h3 id="s7Title">WhatsApp Support</h3>
+                        <div class="service-details" id="s7Details"></div>
+                        <div class="s-benefit">✨ <span id="s7Ben">Benefit: Connection.</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header text-center reveal">
                 <h2 id="whyTitle">Why Choose Us</h2>
-                <p id="whySubtitle">We are committed to long-term impact and transparency.</p>
+                <div class="divider"></div>
             </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="icon-box icon-orange"><i class="fas fa-shield-halved"></i></div>
-                    <h3 id="why1T">Reputation First</h3>
-                    <p id="why1D">We focus on image and long-term presence.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon-box icon-blue"><i class="fas fa-file-invoice"></i></div>
-                    <h3 id="why2T">Transparent Services</h3>
-                    <p id="why2D">Structured pricing and clear deliverables.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon-box icon-orange"><i class="fas fa-map-location-dot"></i></div>
-                    <h3 id="why3T">Local Understanding</h3>
-                    <p id="why3D">Execution with deep local market relevance.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="icon-box icon-blue"><i class="fas fa-user-check"></i></div>
-                    <h3 id="why4T">Direct Founder Involvement</h3>
-                    <p id="why4D">Strategy overseen personally by the founder.</p>
-                </div>
-                 <div class="feature-card">
-                    <div class="icon-box icon-orange"><i class="fas fa-chart-line"></i></div>
-                    <h3 id="why5T">Long-term Impact</h3>
-                    <p id="why5D">We don't do short-term hype. We build consistency.</p>
-                </div>
-            </div>
-
-            <div style="margin-top: 60px;">
-                <div class="section-title">
-                    <h2 id="howWorkTitle">How We Work</h2>
-                </div>
-                <div class="process-grid">
-                    <div class="process-step">
-                        <h4 id="step1T">1. Understand Requirement</h4>
-                        <p id="step1D">We analyze your goals and current digital standing.</p>
-                    </div>
-                    <div class="process-step">
-                        <h4 id="step2T">2. Build Strategy</h4>
-                        <p id="step2D">We create a roadmap tailored to your business.</p>
-                    </div>
-                    <div class="process-step">
-                        <h4 id="step3T">3. Execute Consistently</h4>
-                        <p id="step3D">We implement the plan and provide ongoing guidance.</p>
-                    </div>
-                </div>
+            <div class="why-grid">
+                <div class="why-item reveal"><i class="fas fa-crown"></i><h4 id="wy1Title">Reputation First</h4><p id="wy1Desc">Focus on long-term presence.</p></div>
+                <div class="why-item reveal"><i class="fas fa-file-contract"></i><h4 id="wy2Title">Transparent Services</h4><p id="wy2Desc">Clear deliverables.</p></div>
+                <div class="why-item reveal"><i class="fas fa-map-marked-alt"></i><h4 id="wy3Title">Local Understanding</h4><p id="wy3Desc">Deep market relevance.</p></div>
+                <div class="why-item reveal"><i class="fas fa-user-check"></i><h4 id="wy4Title">Direct Founder Involvement</h4><p id="wy4Desc">Strategy by founder.</p></div>
+                <div class="why-item reveal"><i class="fas fa-chart-line"></i><h4 id="wy5Title">Long-term Impact</h4><p id="wy5Desc">Consistency over hype.</p></div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="section-padding" style="background: var(--light-bg);">
-        <div class="container reveal">
-            <div class="section-title">
-                <h2 id="aboutTitle">About Us</h2>
-            </div>
-            <p class="text-center" id="aboutText" style="max-width: 900px; margin: 0 auto; margin-bottom: 40px; font-size: 1rem;">
-                Pratishtha Digital Solutions was founded with a clear mission — to help businesses and individuals build reputation, visibility, and influence through digital platforms.
-                <br><br>
-                In the modern digital era, online perception matters. Your Google profile, reviews, and social media presence directly impact customer trust. We focus on building a strong and respected digital identity, ensuring long-term credibility and growth.
-            </p>
-
-            <div class="founder-wrapper">
-                <div class="founder-img">
-                    <div class="founder-glow">
-                        <img src="founder.jpeg" alt="Arjunkumar S Udawant" onerror="this.src='founder.jpg'">
-                    </div>
-                </div>
-                <div class="founder-info">
-                    <h4 id="meetFounder">Meet the Founder</h4>
-                    <h3>Arjunkumar S Udawant</h3>
-                    <p style="font-size: 1rem; color: var(--primary-blue); font-weight: 500; margin-bottom: 20px;" id="founderRole">Founder – Pratishtha Digital Solutions</p>
-                    <p id="founderBio">Arjunkumar S Udawant is a digital presence strategist with a strong interest in reputation building, public perception, and brand identity.<br><br>He founded Pratishtha Digital Solutions to provide structured, ethical, and professional digital services for local and growing businesses. He personally oversees client communication, strategy planning, and service execution.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="services" class="section-padding">
-        <div class="container reveal">
-            <div class="section-title">
-                <h2 id="servicesTitle">Our Services</h2>
-                <p id="servicesSubtitle">Complete digital presence solutions designed to build trust.</p>
-            </div>
-            <div class="services-container">
-                <div class="service-card">
-                    <div class="icon-box icon-blue"><i class="fab fa-google"></i></div>
-                    <h3><span id="s1T">Google Business Profile</span></h3>
-                    <p id="s1D" style="margin-bottom: 15px; font-size: 0.95rem;">Your Google presence is the first thing customers check.</p>
-                    <ul class="service-list" id="s1L">
-                        <li>Google Business Profile setup & optimisation</li>
-                        <li>Category, business details & description writing</li>
-                        <li>Profile photo and cover setup</li>
-                        <li>Services section and updates</li>
-                        <li>Review growth guidance</li>
-                        <li>Professional review reply drafting</li>
-                        <li>Negative review handling support</li>
-                    </ul>
-                    <div class="benefit-box" id="s1B">Benefit: More trust, stronger visibility, better customer confidence.</div>
-                </div>
-                <div class="service-card">
-                    <div class="icon-box icon-orange"><i class="fab fa-instagram"></i></div>
-                    <h3><span id="s2T">Social Media Management</span></h3>
-                    <p id="s2D" style="margin-bottom: 15px; font-size: 0.95rem;">Strong presence on Instagram and Facebook.</p>
-                    <ul class="service-list" id="s2L">
-                        <li>Page setup and profile optimisation</li>
-                        <li>Bio writing and highlights structure</li>
-                        <li>Weekly content planning</li>
-                        <li>Caption writing with hashtags</li>
-                        <li>Regular posting support</li>
-                        <li>Poster and creative designs</li>
-                    </ul>
-                    <div class="benefit-box" id="s2B">Benefit: Better reach, engagement, and brand recall.</div>
-                </div>
-                <div class="service-card">
-                    <div class="icon-box icon-blue"><i class="fas fa-clapperboard"></i></div>
-                    <h3><span id="s3T">Reels & Short Video</span></h3>
-                    <p id="s3D" style="margin-bottom: 15px; font-size: 0.95rem;">Short videos increase visibility quickly.</p>
-                    <ul class="service-list" id="s3L">
-                        <li>Reel content ideas</li>
-                        <li>Editing support and branding</li>
-                        <li>Trend-based visibility strategy</li>
-                        <li>Posting optimisation</li>
-                    </ul>
-                    <div class="benefit-box" id="s3B">Benefit: Higher reach and modern brand image.</div>
-                </div>
-                <div class="service-card">
-                    <div class="icon-box icon-orange"><i class="fas fa-user-tie"></i></div>
-                    <h3><span id="s4T">Personal Branding</span></h3>
-                    <p id="s4D" style="margin-bottom: 15px; font-size: 0.95rem;">For professionals, business owners & public figures.</p>
-                    <ul class="service-list" id="s4L">
-                        <li>Identity and image strategy</li>
-                        <li>Profile building support</li>
-                        <li>Authority positioning</li>
-                        <li>Consistent public presence planning</li>
-                    </ul>
-                    <div class="benefit-box" id="s4B">Benefit: Strong identity, respect, and influence.</div>
-                </div>
-                <div class="service-card">
-                    <div class="icon-box icon-blue"><i class="fas fa-bullhorn"></i></div>
-                    <h3><span id="s5T">Event Promotion</span></h3>
-                    <p id="s5D" style="margin-bottom: 15px; font-size: 0.95rem;">Digital visibility for events and campaigns.</p>
-                    <ul class="service-list" id="s5L">
-                        <li>Event posters and announcements</li>
-                        <li>Digital invitations</li>
-                        <li>Awareness campaign creatives</li>
-                        <li>Post-event highlights</li>
-                    </ul>
-                    <div class="benefit-box" id="s5B">Benefit: Better participation and recognition.</div>
-                </div>
-                <div class="service-card">
-                    <div class="icon-box icon-orange"><i class="fas fa-laptop-code"></i></div>
-                    <h3><span id="s6T">Website & Identity</span></h3>
-                    <p id="s6D" style="margin-bottom: 15px; font-size: 0.95rem;">Clean business websites for credibility.</p>
-                    <ul class="service-list" id="s6L">
-                        <li>Basic websites (1–3 pages)</li>
-                        <li>Mobile responsive design</li>
-                        <li>Landing pages for campaigns</li>
-                        <li>Domain and hosting guidance</li>
-                    </ul>
-                    <p style="font-size: 0.85rem; color: red;" id="domainNote">⚠ Domain/hosting cost paid separately by client.</p>
-                    <div class="benefit-box" id="s6B">Benefit: Professional credibility, Strong digital identity.</div>
-                </div>
-                <div class="service-card">
-                    <div class="icon-box icon-blue"><i class="fab fa-whatsapp"></i></div>
-                    <h3><span id="s7T">WhatsApp Support</span></h3>
-                    <p id="s7D" style="margin-bottom: 15px; font-size: 0.95rem;">We help businesses communicate professionally.</p>
-                    <ul class="service-list" id="s7L">
-                        <li>Business intro messages</li>
-                        <li>Festival and update messages</li>
-                        <li>Broadcast strategy guidance</li>
-                        <li>Announcement content writing</li>
-                    </ul>
-                    <div class="benefit-box" id="s7B">Benefit: Better customer connection, Clear communication.</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-padding" style="background: var(--light-bg);">
+    <section class="review-section">
         <div class="container text-center reveal">
-            <h2 id="tellReq" style="color: var(--primary-blue); margin-bottom: 20px;">Tell Us Your Requirement</h2>
-            <div style="background: var(--white); padding: 30px; display: inline-block; border-radius: 20px; text-align: left; width: 100%; max-width: 600px; box-shadow: var(--shadow-soft); border: 1px solid #eee;">
-                <p id="selectText"><strong>You can select:</strong></p>
-                <ul style="margin-bottom: 25px; margin-top: 15px;" id="selectList">
-                    <li>✅ Google Presence & Reviews</li>
-                    <li>✅ Social Media Management</li>
-                    <li>✅ Reels Support</li>
-                    <li>✅ Personal Branding</li>
-                    <li>✅ Event Promotion</li>
-                    <li>✅ Website Development</li>
-                    <li>✅ WhatsApp Communication</li>
-                </ul>
-                <div class="text-center">
-                    <a href="https://forms.gle/r8PTRUzmAeAEWwNy8" target="_blank" class="btn btn-primary" id="fillFormBtn" style="width: 100%;">
-                        Fill Enquiry Form
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="work" class="work-section section-padding">
-        <div class="container reveal">
-            <div class="section-title">
-                <h2 style="color: white;" id="workTitle">Work With Us</h2>
-                <p style="color: rgba(255,255,255,0.8);" id="workSubtitle">Freelance & Associate Opportunities</p>
-            </div>
-            
-            <div class="work-card">
-                <div class="work-left">
-                    <h3 id="joinTitle">Join Our Network</h3>
-                    <p id="joinText">Pratishtha Digital Solutions offers work-based freelance opportunities for students and individuals interested in digital work.</p>
-                    <p style="margin-top: 20px; font-weight: bold; font-size: 0.9rem; opacity: 0.8; color: #ffeb3b;" id="joinNote">⚠ This is not a fixed salary role. Payment is strictly work-based.</p>
-                </div>
-                <div class="work-right">
-                    <ul class="work-list" id="workRoles">
-                        <li>Client coordination and calling</li>
-                        <li>Social media support</li>
-                        <li>Lead generation</li>
-                        <li>Content assistance</li>
-                    </ul>
-                    <a href="https://forms.gle/3tjYj2r79HRTPcst6" target="_blank" class="btn" style="background: white; color: var(--primary-blue); width: 100%;" id="applyBtn">Apply Now</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-padding">
-        <div class="container reveal">
-            <div class="section-title">
-                <h2 id="faqTitle">FAQ</h2>
-            </div>
-            <div class="faq-grid">
-                <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-q"><span id="q1">Is ad budget included?</span> <i class="fas fa-chevron-down hidden-desktop"></i></div>
-                    <div class="faq-a" id="a1">No, ad budget is separate and paid by the client directly to the platform.</div>
-                </div>
-                <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-q"><span id="q2">Is domain included?</span> <i class="fas fa-chevron-down hidden-desktop"></i></div>
-                    <div class="faq-a" id="a2">No, domain and hosting are purchased separately by the client. We guide you.</div>
-                </div>
-                <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-q"><span id="q3">Do you provide monthly packages?</span> <i class="fas fa-chevron-down hidden-desktop"></i></div>
-                    <div class="faq-a" id="a3">Yes, we offer structured monthly packages tailored to your requirements.</div>
-                </div>
-                <div class="faq-item" onclick="toggleFaq(this)">
-                    <div class="faq-q"><span id="q4">Do you work with small businesses?</span> <i class="fas fa-chevron-down hidden-desktop"></i></div>
-                    <div class="faq-a" id="a4">Yes, we work with small, mid-level and growing businesses.</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section-padding" style="background: var(--light-bg);">
-        <div class="container reveal">
-            <div class="section-title">
-                <h2 id="contactTitle">Contact Information</h2>
-            </div>
-            <div class="contact-grid">
-                <div>
-                    <h3 style="color: var(--primary-blue); margin-bottom: 25px;">Pratishtha Digital Solutions</h3>
-                    
-                    <div class="contact-row">
-                        <div class="icon-box contact-icon-blue icon-contact"><i class="fas fa-headset"></i></div>
-                        <div>
-                            <strong>Company Contact:</strong><br>
-                            <a href="tel:+919420250546" style="color: var(--text-main);">+91 94202 50546</a>
+            <div class="review-card">
+                
+                <div class="google-header">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar">P</div>
+                        <div style="text-align: left;">
+                            <span class="reviewer-name">Pratishtha Client</span>
+                            <span class="reviewer-date">Verified Customer</span>
                         </div>
                     </div>
-                    
-                    <div class="contact-row">
-                        <div class="icon-box contact-icon-orange icon-contact"><i class="fas fa-mobile-alt"></i></div>
-                        <div>
-                            <strong>Founder (Arjunkumar):</strong><br>
-                            <a href="tel:+917058484880" style="color: var(--text-main);">+91 70584 84880</a>
-                        </div>
+                    <svg viewBox="0 0 48 48" class="google-logo"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"></path><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"></path><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"></path><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"></path></svg>
+                </div>
+
+                <div class="stars">★★★★★</div>
+                
+                <div class="review-slider">
+                    <div class="review-slide active">
+                        <p class="review-text" id="rev1Text">"Very professional and genuine service. They helped improve our online presence significantly."</p>
                     </div>
-                    
-                    <div class="contact-row">
-                        <div class="icon-box contact-icon-blue icon-contact"><i class="fas fa-envelope"></i></div>
-                        <div>pratishthadigitalofficial@gmail.com</div>
+                    <div class="review-slide">
+                        <p class="review-text" id="rev2Text">"The best digital growth partner. Our local visibility increased drastically!"</p>
                     </div>
-                    <div class="contact-row">
-                        <div class="icon-box contact-icon-orange icon-contact"><i class="fas fa-globe"></i></div>
-                        <div>www.pratishthadigital.com</div>
-                    </div>
-                    <div class="contact-row">
-                        <div class="icon-box contact-icon-blue icon-contact"><i class="fas fa-map-location-dot"></i></div>
-                        <div id="location">Maharashtra, India</div>
+                    <div class="review-slide">
+                        <p class="review-text" id="rev3Text">"Highly recommended for their transparent and structured digital strategies."</p>
                     </div>
                 </div>
-                <div class="text-center">
-                    <h3 style="margin-bottom: 20px;" id="connectTitle">Connect Socially</h3>
-                    <div class="social-colored">
-                        <a href="https://instagram.com/pratishthadigital"><i class="fab fa-instagram"></i></a>
-                        <a href="https://facebook.com/pratishthadigital"><i class="fab fa-facebook"></i></a>
-                        <a href="https://youtube.com/@pratishthadigital"><i class="fab fa-youtube"></i></a>
+
+                <div class="review-footer">
+                    <div class="slider-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
                     </div>
+                    <a href="https://share.google/tksqPwKi5eZ41PfYr" target="_blank" class="review-link" id="revLink">View on Google</a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="section-padding bg-light-blue">
+        <div class="container reveal">
+            <div class="work-grid">
+                <div class="work-img"></div>
+                <div class="work-content">
+                    <h2 id="workTitle">Work With Us</h2>
+                    <h4 id="workSubtitle" style="color:var(--text-light); margin-bottom:10px;">Freelance Opportunities</h4>
+                    <p id="workDesc" style="margin-bottom:20px;">Join Our Network</p>
+                    <ul class="roles" id="workRoles"></ul>
+                    <div class="warning-box"><i class="fas fa-exclamation-triangle"></i> <span id="workWarn">Payment is strictly work-based.</span></div>
+                    <a href="https://forms.gle/3tjYj2r79HRTPcst6" target="_blank" class="btn btn-outline" id="btnApply">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="section-padding" style="background: white;">
+        <div class="container reveal">
+            <h2 class="text-center" style="margin-bottom: 30px;" id="faqTitle">FAQ</h2>
+            <div class="faq-container">
+                <div class="faq-item" onclick="this.classList.toggle('active')"><div class="faq-q"><span id="q1">Is ad budget included?</span> <i class="fas fa-chevron-down"></i></div><div class="faq-a" id="a1">No, ad budget is separate.</div></div>
+                <div class="faq-item" onclick="this.classList.toggle('active')"><div class="faq-q"><span id="q2">Is domain included?</span> <i class="fas fa-chevron-down"></i></div><div class="faq-a" id="a2">No, domain is separate.</div></div>
+                <div class="faq-item" onclick="this.classList.toggle('active')"><div class="faq-q"><span id="q3">Do you provide monthly packages?</span> <i class="fas fa-chevron-down"></i></div><div class="faq-a" id="a3">Yes, structured packages available.</div></div>
+                <div class="faq-item" onclick="this.classList.toggle('active')"><div class="faq-q"><span id="q4">Do you work with small businesses?</span> <i class="fas fa-chevron-down"></i></div><div class="faq-a" id="a4">Yes, we help growing businesses.</div></div>
+                <div class="faq-item" onclick="this.classList.toggle('active')"><div class="faq-q"><span id="q5">How long to see results?</span> <i class="fas fa-chevron-down"></i></div><div class="faq-a" id="a5">Initial results in a few weeks.</div></div>
+                <div class="faq-item" onclick="this.classList.toggle('active')"><div class="faq-q"><span id="q6">Do you provide content?</span> <i class="fas fa-chevron-down"></i></div><div class="faq-a" id="a6">Yes, designs and content included.</div></div>
+                <div class="faq-item" onclick="this.classList.toggle('active')"><div class="faq-q"><span id="q7">How to start?</span> <i class="fas fa-chevron-down"></i></div><div class="faq-a" id="a7">Contact via WhatsApp.</div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container enquiry-wrapper reveal">
+            <div class="enquiry-card">
+                <h2 id="enqTitle">Tell Us Your Requirement</h2>
+                <div class="enquiry-grid" id="enqOpt"></div>
+                <a href="https://forms.gle/r8PTRUzmAeAEWwNy8" class="btn btn-glow" id="btnEnq" target="_blank">Fill Enquiry Form</a>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <h3>Pratishtha Digital Solutions</h3>
-            <p style="opacity: 0.6; font-size: 0.9rem;" id="footerTag">Building Reputation. Creating Impact.</p>
-            <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.5;" id="footerLoc">Based in Maharashtra, India.</p>
-            <br>
-            <p style="font-size: 0.8rem; opacity: 0.4;">&copy; 2026 Pratishtha Digital Solutions. All Rights Reserved.</p>
+            <div class="footer-grid">
+                <div class="footer-info text-center">
+                    <h3>Pratishtha Digital</h3>
+                    <p id="footerTag" style="display:block; width:100%; text-align:center;">Building Reputation. Creating Impact.</p>
+                </div>
+                <div class="footer-contacts">
+                    <p><i class="fas fa-phone"></i> +91 94202 50546</p>
+                    <p><i class="fas fa-mobile-alt"></i> +91 70584 84880</p>
+                    <p><i class="fas fa-envelope"></i> pratishthadigitalofficial@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Maharashtra, India</p>
+                </div>
+            </div>
+            
+            <div class="footer-social">
+                <a href="https://instagram.com/pratishthadigital" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://facebook.com/pratishthadigital" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://youtube.com/@pratishthadigital" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+            
+            <div class="copyright">© 2026 Pratishtha Digital Solutions. All Rights Reserved.</div>
         </div>
     </footer>
 
     <div class="bottom-nav">
-        <a href="#home" class="nav-item active"><i class="fas fa-home"></i> Home</a>
-        <a href="#services" class="nav-item"><i class="fas fa-layer-group"></i> Services</a>
-        
-        <div class="nav-fab-container">
-            <a href="https://wa.me/919420250546" class="nav-fab"><i class="fab fa-whatsapp"></i></a>
-        </div>
-        
-        <a href="#work" class="nav-item"><i class="fas fa-briefcase"></i> Work</a>
-        <a href="tel:+919420250546" class="nav-item"><i class="fas fa-phone-alt" style="transform: scaleX(-1);"></i> Call</a>
+        <a href="#home" class="nav-item active"><i class="fas fa-home"></i> <span>Home</span></a>
+        <a href="#services" class="nav-item"><i class="fas fa-layer-group"></i> <span>Services</span></a>
+        <div class="nav-fab-container"><a href="https://wa.me/919420250546" class="nav-fab" target="_blank"><i class="fab fa-whatsapp"></i></a></div>
+        <a href="#work" class="nav-item"><i class="fas fa-briefcase"></i> <span>Work</span></a>
+        <a href="tel:+919420250546" class="nav-item"><i class="fas fa-phone-alt flip-icon"></i> <span>Call</span></a>
     </div>
-
-    <a href="https://wa.me/919420250546" class="float-btn wa-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    
+    <a href="https://wa.me/919420250546" class="float-btn hidden-mobile" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <button id="backToTop" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
 
     <script>
-        // TRANSLATIONS
-        const translations = {
+        const content = {
             en: {
-                navHome: "Home", navAbout: "About", navServices: "Services", navWork: "Work With Us", navGetStarted: "Get Started",
+                navHome: "Home", navAbout: "About", navServices: "Services", navWork: "Work With Us", navContact: "Contact",
                 heroTitle: "Building Reputation.<br>Creating Impact.",
-                heroSubtitle: "Digital Presence & Reputation Solutions for Businesses & Professionals.",
-                heroText: "Pratishtha Digital Solutions is a digital consulting firm based in Maharashtra, India. We help businesses and individuals build a strong online presence, improve reputation, and create a trusted digital identity. In today’s world, people search online before they decide. We ensure that when someone finds your business, they see professionalism, credibility, and trust.",
-                btnStarted: "Get Started Now <i class='fas fa-arrow-right'></i>",
-                btnWhatsapp: "Chat on WhatsApp <i class='fab fa-whatsapp'></i>",
-                offerTitle: "What We Offer", offerSubtitle: "Comprehensive solutions for your digital growth.",
-                feat1: "Google Presence", feat2: "Social Media", feat3: "Personal Branding", feat4: "Digital Identity", feat5: "Event Promotion",
-                whyTitle: "Why Choose Us", whySubtitle: "We are committed to long-term impact.",
-                why1T: "Reputation First", why1D: "Focus on image and long-term presence.",
-                why2T: "Transparent Services", why2D: "Structured pricing and deliverables.",
-                why3T: "Local Understanding", why3D: "Deep local market relevance.",
-                why4T: "Founder Involvement", why4D: "Strategy overseen by founder.",
-                why5T: "Long-term Impact", why5D: "No short-term hype. Consistency.",
-                howWorkTitle: "How We Work",
-                step1T: "1. Understand", step1D: "We analyze your goals.",
-                step2T: "2. Strategy", step2D: "We create a roadmap.",
-                step3T: "3. Execute", step3D: "We implement & guide.",
-                aboutTitle: "About Us",
-                aboutText: "Pratishtha Digital Solutions was founded with a clear mission — to help businesses and individuals build reputation, visibility, and influence through digital platforms. In the modern digital era, online perception matters.",
-                meetFounder: "Meet the Founder", founderRole: "Founder – Pratishtha Digital Solutions",
-                founderBio: "Arjunkumar S Udawant is a digital presence strategist with a strong interest in reputation building, public perception, and brand identity.<br><br>He founded Pratishtha Digital Solutions to provide structured, ethical, and professional digital services for local and growing businesses. He personally oversees client communication, strategy planning, and service execution.",
-                servicesTitle: "Our Services", servicesSubtitle: "Complete digital presence solutions.",
+                heroSub: "Professional Digital Presence & Reputation Solutions.",
+                heroDesc: "Pratishtha Digital Solutions is a digital consulting firm based in Maharashtra, India. We help businesses and individuals build a strong online presence, improve reputation, and create a trusted digital identity.",
+                heroTrust: "Trusted Digital Partner for Growing Businesses in Maharashtra.",
+                btnStart: "Start Your Journey <i class='fas fa-arrow-right'></i>",
+                btnChat: "Chat on WhatsApp <i class='fab fa-whatsapp'></i>",
+                stat1Label: "Client Satisfaction", stat2Label: "Google Rating", stat3Label: "Support",
+                wwhTitle: "Who We Help", wwh1: "Local Businesses", wwh2: "Clinics & Hospitals", wwh3: "Restaurants", wwh4: "Real Estate", wwh5: "Politicians / Social", wwh6: "Institutes",
+                psTitle: "Why Businesses Lose Customers Online?",
+                probTitle: "The Problem", prob1: "Low Google reviews or negative rating.", prob2: "No online visibility when searched.", prob3: "Weak digital identity compared to competitors.", prob4: "Inactive social media presence.",
+                solTitle: "Our Solution", solDesc: "We build a strong digital presence.",
+                sol1: "More Trust", sol2: "More Visibility", sol3: "More Inquiries",
                 
-                // SERVICE 1
-                s1T: "Google Business Profile", s1D: "Your Google presence is the first thing customers check before visiting or calling. We ensure your business looks trusted and professional online.",
-                s1L: "<li>Google Business Profile setup & optimisation</li><li>Category, business details & description writing</li><li>Profile photo and cover setup</li><li>Services section and updates</li><li>Review growth guidance</li><li>Professional review reply drafting</li><li>Negative review handling support</li>",
-                s1B: "Benefit: More trust, stronger visibility, better customer confidence.",
-
-                // SERVICE 2
-                s2T: "Social Media", s2D: "We help brands maintain a consistent and professional presence on Instagram and Facebook.",
-                s2L: "<li>Page setup and profile optimisation</li><li>Bio writing and highlights structure</li><li>Weekly content planning</li><li>Caption writing with hashtags</li><li>Regular posting support</li><li>Poster and creative designs</li>",
-                s2B: "Benefit: Better reach, engagement, and brand recall.",
-
-                // SERVICE 3
-                s3T: "Reels & Video", s3D: "Short videos increase visibility quickly.",
-                s3L: "<li>Reel content ideas</li><li>Editing support and branding</li><li>Trend-based visibility strategy</li><li>Posting optimisation</li>",
-                s3B: "Benefit: Higher reach and modern brand image.",
-
-                // SERVICE 4
-                s4T: "Personal Branding", s4D: "For professionals and public-facing individuals, perception matters.",
-                s4L: "<li>Identity and image strategy</li><li>Profile building support</li><li>Authority positioning</li><li>Consistent public presence planning</li>",
-                s4B: "Benefit: Strong identity, respect, and influence.",
-
-                // SERVICE 5
-                s5T: "Event Promotion", s5D: "We support institutions and campaigns through digital visibility.",
-                s5L: "<li>Event posters and announcements</li><li>Digital invitations</li><li>Awareness campaign creatives</li><li>Post-event highlights</li>",
-                s5B: "Benefit: Better participation and recognition.",
-
-                // SERVICE 6
-                s6T: "Website & Identity", s6D: "We create clean business websites for credibility.",
-                s6L: "<li>Basic websites (1–3 pages)</li><li>Mobile responsive design</li><li>Landing pages for campaigns</li><li>Domain and hosting guidance</li>",
-                domainNote: "⚠ Domain/hosting cost paid separately by client.",
-                s6B: "Benefit: Professional credibility, Strong digital identity.</div>",
-
-                // SERVICE 7
-                s7T: "WhatsApp Support", s7D: "We help businesses communicate professionally.",
-                s7L: "<li>Business intro messages</li><li>Festival and update messages</li><li>Broadcast strategy guidance</li><li>Announcement content writing</li>",
-                s7B: "Benefit: Better customer connection, Clear communication.",
-
-                tellReq: "Tell Us Your Requirement", selectText: "You can select:", fillFormBtn: "Fill Enquiry Form",
-                selectList: "<li>✅ Google Presence & Reviews</li><li>✅ Social Media Management</li><li>✅ Reels Support</li><li>✅ Personal Branding</li><li>✅ Event Promotion</li><li>✅ Website Development</li><li>✅ WhatsApp Communication</li>",
-
-                workTitle: "Work With Us", workSubtitle: "Freelance Opportunities",
-                joinTitle: "Join Our Network", joinText: "Pratishtha Digital Solutions offers work-based freelance opportunities for students and individuals interested in digital work.", joinNote: "⚠ This is not a fixed salary role. Payment is strictly work-based.",
-                workRoles: "<li>Client coordination and calling</li><li>Social media support</li><li>Lead generation</li><li>Content assistance</li>",
-                applyBtn: "Apply Now",
+                aboutTitle: "About Us", 
+                aboutDesc: `<strong>About Pratishtha Digital Solutions</strong>
+                Pratishtha Digital Solutions is a professional digital presence and reputation consulting firm based in Maharashtra, India.<br>
+                We help businesses, professionals, and public figures build a strong and trusted digital identity across Google, social media, and web platforms.<br><br>
+                In today’s digital world, customers search online before making any decision.<br>
+                Our goal is to ensure that when someone searches for your business, they see professionalism, credibility, and trust.<br><br>
+                We focus on building long-term digital reputation, improving visibility, and creating a strong brand image that attracts customers and builds confidence.<br>
+                With a structured and transparent approach, we work closely with each client to deliver consistent growth and a powerful digital presence.<br><br>
+                <strong>Building Reputation. Creating Impact.</strong>`,
                 
+                meetFounder: "Meet the Founder", founderRole: "Founder & Digital Strategist", founderBio: "Arjunkumar S Udawant is a digital presence strategist focused on building strong and trusted digital identities for businesses and professionals. He founded Pratishtha Digital Solutions with a vision to help brands create a professional and impactful online presence. He personally oversees client communication, strategy planning, and service quality to ensure every client builds a powerful and trusted digital reputation.",
+                
+                servTitle: "Our Services",
+                s1Title: "Google Business Profile", s1Details: "<ul><li>Setup & Optimisation</li><li>Category Writing</li><li>Profile Photo Setup</li><li>Review Growth Guidance</li><li>Professional Reply Drafting</li><li>Negative Review Handling</li></ul>", s1Ben: "Benefit: Trust & Visibility.",
+                s2Title: "Social Media Management", s2Details: "<ul><li>Page Optimisation</li><li>Bio Structure</li><li>Content Planning</li><li>Caption Writing</li><li>Regular Posting</li><li>Creative Designs</li></ul>", s2Ben: "Benefit: Brand Recall.",
+                s3Title: "Reels & Short Video", s3Details: "<ul><li>Reel Content Ideas</li><li>Editing Support</li><li>Trend Strategy</li><li>Posting Optimisation</li></ul>", s3Ben: "Benefit: High Reach.",
+                s4Title: "Personal Branding", s4Details: "<ul><li>Image Strategy</li><li>Profile Building</li><li>Authority Positioning</li><li>Consistent Presence</li></ul>", s4Ben: "Benefit: Influence.",
+                s5Title: "Event Promotion", s5Details: "<ul><li>Posters</li><li>Digital Invitations</li><li>Awareness Creatives</li><li>Event Highlights</li></ul>", s5Ben: "Benefit: Recognition.",
+                s6Title: "Website & Identity", s6Details: "<ul><li>Basic Websites</li><li>Mobile Responsive</li><li>Landing Pages</li><li>Domain Guidance</li></ul>", s6Ben: "Benefit: Credibility.",
+                s7Title: "WhatsApp Support", s7Details: "<ul><li>Business Intro Messages</li><li>Festival Updates</li><li>Broadcast Strategy</li><li>Content Writing</li></ul>", s7Ben: "Benefit: Connection.",
+                whyTitle: "Why Choose Us",
+                wy1Title: "Reputation First", wy1Desc: "Focus on long-term presence.",
+                wy2Title: "Transparent Services", wy2Desc: "Clear deliverables.",
+                wy3Title: "Local Understanding", wy3Desc: "Deep market relevance.",
+                wy4Title: "Direct Founder Involvement", wy4Desc: "Strategy by founder.",
+                wy5Title: "Long-term Impact", wy5Desc: "Consistency over hype.",
+                
+                rev1Text: '"Very professional and genuine service. They helped improve our online presence significantly."',
+                rev2Text: '"The best digital growth partner. Our local visibility increased drastically!"',
+                rev3Text: '"Highly recommended for their transparent and structured digital strategies."',
+                revLink: 'View on Google',
+
+                workTitle: "Work With Us", workSubtitle: "Freelance Opportunities", workDesc: "Pratishtha Digital Solutions offers work-based freelance opportunities for students and individuals interested in digital work.", workWarn: "This is not a fixed salary role. Payment is strictly work-based.", 
+                workRoles: "<li>Client coordination and calling</li><li>Social media support</li><li>Lead generation</li><li>Content assistance</li>", btnApply: "Apply Now",
                 faqTitle: "FAQ",
                 q1: "Is ad budget included?", a1: "No, ad budget is separate.",
-                q2: "Is domain included?", a2: "No, domain/hosting is separate.",
+                q2: "Is domain included?", a2: "No, domain is separate.",
                 q3: "Do you provide monthly packages?", a3: "Yes, structured packages available.",
-                q4: "Do you work with small businesses?", a4: "Yes, we work with growing businesses.",
-                
-                contactTitle: "Contact Information", connectTitle: "Connect Socially",
-                footerTag: "Building Reputation. Creating Impact.", footerLoc: "Based in Maharashtra, India."
+                q4: "Do you work with small businesses?", a4: "Yes, we help growing businesses.",
+                q5: "How long to see results?", a5: "Initial results in a few weeks.",
+                q6: "Do you provide content?", a6: "Yes, designs and content included.",
+                q7: "How to start?", a7: "Contact via WhatsApp.",
+                enqTitle: "Tell Us Your Requirement", 
+                enqOpt: `<div class="check-item"><i class="fas fa-check-circle"></i> Google Presence & Reviews</div>
+                         <div class="check-item"><i class="fas fa-check-circle"></i> Social Media Management</div>
+                         <div class="check-item"><i class="fas fa-check-circle"></i> Reels Support</div>
+                         <div class="check-item"><i class="fas fa-check-circle"></i> Personal Branding</div>
+                         <div class="check-item"><i class="fas fa-check-circle"></i> Event Promotion</div>
+                         <div class="check-item"><i class="fas fa-check-circle"></i> Website Development</div>
+                         <div class="check-item"><i class="fas fa-check-circle"></i> WhatsApp Communication</div>`, 
+                btnEnq: "Fill Enquiry Form",
+                footerTag: "Building Reputation. Creating Impact."
             },
             hi: {
-                navHome: "होम", navAbout: "हमारे बारे में", navServices: "सेवाएं", navWork: "जुड़ें", navGetStarted: "शुरू करें",
+                navHome: "होम", navAbout: "हमारे बारे में", navServices: "सेवाएं", navWork: "करियर", navContact: "संपर्क करें",
                 heroTitle: "प्रतिष्ठा बनाइए।<br>प्रभाव बढ़ाइए।",
-                heroSubtitle: "व्यवसायों और प्रोफेशनल्स के लिए डिजिटल पहचान समाधान।",
-                heroText: "Pratishtha Digital Solutions महाराष्ट्र स्थित एक डिजिटल कंसल्टिंग फर्म है। हम व्यवसायों और व्यक्तियों को उनकी ऑनलाइन पहचान मजबूत करने, भरोसा बढ़ाने और डिजिटल प्रतिष्ठा बनाने में मदद करते हैं।",
-                btnStarted: "शुरुआत करें <i class='fas fa-arrow-right'></i>",
-                btnWhatsapp: "WhatsApp पर जुड़ें <i class='fab fa-whatsapp'></i>",
-                offerTitle: "हम क्या देते हैं", offerSubtitle: "आपके डिजिटल विकास के लिए समाधान।",
-                feat1: "Google Presence", feat2: "Social Media", feat3: "Personal Branding", feat4: "Digital Identity", feat5: "Event Promotion",
-                whyTitle: "हमें क्यों चुनें", whySubtitle: "हम प्रतिष्ठा और पारदर्शिता को महत्व देते हैं।",
-                why1T: "प्रतिष्ठा प्रथम", why1D: "हम लॉन्ग-टर्म इमेज पर फोकस करते हैं।",
-                why2T: "पारदर्शी सेवाएं", why2D: "स्पष्ट कीमत और काम।",
-                why3T: "लोकल समझ", why3D: "स्थानीय मार्केट की गहरी समझ।",
-                why4T: "फाउंडर की निगरानी", why4D: "रणनीति फाउंडर द्वारा देखी जाती है।",
-                why5T: "लॉन्ग-टर्म प्रभाव", why5D: "हम सिर्फ प्रचार नहीं, प्रभाव बनाते हैं।",
-                howWorkTitle: "हम कैसे काम करते हैं",
-                step1T: "1. समझना", step1D: "हम आपकी जरूरत समझते हैं।",
-                step2T: "2. रणनीति", step2D: "हम सही रोडमैप बनाते हैं।",
-                step3T: "3. निष्पादन", step3D: "हम काम और मार्गदर्शन करते हैं।",
-                aboutTitle: "हमारे बारे में",
-                aboutText: "Pratishtha Digital Solutions की शुरुआत एक स्पष्ट उद्देश्य के साथ हुई — व्यवसायों और व्यक्तियों को डिजिटल प्लेटफॉर्म पर प्रतिष्ठा, पहचान और प्रभाव बनाने में मदद करना। आज के डिजिटल युग में, ऑनलाइन छवि बहुत मायने रखती है।",
-                meetFounder: "फाउंडर से मिलें", founderRole: "फाउंडर – Pratishtha Digital Solutions",
-                founderBio: "Arjunkumar S Udawant एक डिजिटल रणनीतिकार हैं। उन्होंने स्थानीय व्यवसायों को प्रोफेशनल डिजिटल पहचान देने के लिए इस फर्म की शुरुआत की। वह खुद client communication, strategy planning और execution को oversee करते हैं। <br><br>उन्होंने स्थानीय और बढ़ते व्यवसायों को structured, ethical और professional digital services देने के लिए Pratishtha Digital Solutions की स्थापना की। वह व्यक्तिगत रूप से client communication, strategy planning और service execution की निगरानी करते हैं।",
+                heroSub: "व्यवसायों और प्रोफेशनल्स के लिए डिजिटल पहचान समाधान।",
+                heroDesc: "Pratishtha Digital Solutions महाराष्ट्र स्थित एक डिजिटल कंसल्टिंग फर्म है। हम व्यवसायों और व्यक्तियों को उनकी ऑनलाइन पहचान मजबूत करने, भरोसा बढ़ाने और डिजिटल प्रतिष्ठा बनाने में मदद करते हैं।",
+                heroTrust: "महाराष्ट्र के बढ़ते व्यवसायों के लिए भरोसेमंद डिजिटल पार्टनर।",
+                btnStart: "शुरुआत करें <i class='fas fa-arrow-right'></i>",
+                btnChat: "WhatsApp पर बात करें <i class='fab fa-whatsapp'></i>",
+                stat1Label: "ग्राहक संतुष्टि", stat2Label: "गूगल रेटिंग", stat3Label: "सहयोग",
+                wwhTitle: "हम किनके लिए काम करते हैं", wwh1: "स्थानीय बिजनेस", wwh2: "क्लिनिक और अस्पताल", wwh3: "रेस्टोरेंट और कैफे", wwh4: "रियल एस्टेट", wwh5: "सामाजिक प्रोफाइल", wwh6: "शिक्षण संस्थान",
+                psTitle: "व्यवसाय ऑनलाइन ग्राहक क्यों खो देते हैं?",
+                probTitle: "समस्या", prob1: "कम गूगल रिव्यु या नेगेटिव रेटिंग।", prob2: "सर्च करने पर कोई जानकारी नहीं।", prob3: "कमजोर डिजिटल पहचान।", prob4: "सोशल मीडिया पर निष्क्रियता।",
+                solTitle: "हमारा समाधान", solDesc: "हम एक मजबूत डिजिटल उपस्थिति बनाते हैं।",
+                sol1: "ज्यादा भरोसा", sol2: "बेहतर विजिबिलिटी", sol3: "ज्यादा पूछताछ",
                 
-                servicesTitle: "हमारी सेवाएं", servicesSubtitle: "भरोसा बनाने के लिए डिजिटल समाधान।",
-                s1T: "Google Business Profile", s1D: "आपकी Google presence ग्राहक का पहला भरोसा बनाती है।",
-                s1L: "<li>Profile setup और optimisation</li><li>Category और description writing</li><li>Profile photo setup</li><li>Services section updates</li><li>Review growth guidance</li><li>Professional reply drafting</li><li>Negative review handling</li>",
-                s1B: "लाभ: ज्यादा भरोसा, बेहतर विजिबिलिटी।",
-
-                s2T: "Social Media", s2D: "Instagram और Facebook पर मजबूत उपस्थिति।",
-                s2L: "<li>Page setup और optimisation</li><li>Bio writing</li><li>Weekly content planning</li><li>Captions + hashtags</li><li>Regular posting</li><li>Creative designs</li>",
-                s2B: "लाभ: बेहतर रीच और ब्रांड वैल्यू।",
-
-                s3T: "Reels & Video", s3D: "वीडियो से रीच तेजी से बढ़ती है।",
-                s3L: "<li>Reel ideas</li><li>Editing support</li><li>Trend-based strategy</li><li>Posting optimisation</li>",
-                s3B: "लाभ: हाई रीच और मॉडर्न इमेज।",
-
-                s4T: "Personal Branding", s4D: "प्रोफेशनल्स और पब्लिक फिगर के लिए।",
-                s4L: "<li>Image strategy</li><li>Profile building</li><li>Authority positioning</li><li>Consistent public presence</li>",
-                s4B: "लाभ: मजबूत पहचान और सम्मान।",
-
-                s5T: "Event Promotion", s5D: "इवेंट्स के लिए डिजिटल विजिबिलिटी।",
-                s5L: "<li>Posters और announcements</li><li>Digital invitations</li><li>Awareness creatives</li><li>Event highlights</li>",
-                s5B: "लाभ: ज्यादा सहभागिता और पहचान।",
-
-                s6T: "Website & Identity", s6D: "विश्वसनीयता के लिए क्लीन वेबसाइट।",
-                s6L: "<li>Basic website (1–3 pages)</li><li>Mobile responsive</li><li>Landing pages</li><li>Domain guidance</li>",
-                domainNote: "⚠ Domain और hosting की लागत अलग होगी।",
-                s6B: "लाभ: प्रोफेशनल क्रेडिबिलिटी।",
-
-                s7T: "WhatsApp Support", s7D: "प्रोफेशनल कम्युनिकेशन के लिए।",
-                s7L: "<li>Business intro messages</li><li>Festival updates</li><li>Broadcast strategy</li><li>Content writing</li>",
-                s7B: "लाभ: बेहतर कस्टमर कनेक्शन।",
-
-                tellReq: "अपनी जरूरत बताएं", selectText: "आप चुन सकते हैं:", fillFormBtn: "Enquiry Form भरें",
-                selectList: "<li>✅ Google Presence & Reviews</li><li>✅ Social Media Management</li><li>✅ Reels Support</li><li>✅ Personal Branding</li><li>✅ Event Promotion</li><li>✅ Website Development</li><li>✅ WhatsApp Communication</li>",
-
-                workTitle: "हमारे साथ जुड़ें", workSubtitle: "फ्रीलांस अवसर",
-                joinTitle: "हमारे नेटवर्क से जुड़ें", joinText: "हम छात्रों और individuals को work-based freelance opportunities प्रदान करते हैं।", joinNote: "⚠ यह fixed salary role नहीं है। Payment strictly work-based रहेगा।",
-                workRoles: "<li>Client coordination & calling</li><li>Social media support</li><li>Lead generation</li><li>Content assistance</li>",
-                applyBtn: "अप्लाई करें",
+                aboutTitle: "हमारे बारे में", 
+                aboutDesc: `<strong>हमारे बारे में</strong>
+                Pratishtha Digital Solutions महाराष्ट्र स्थित एक प्रोफेशनल डिजिटल प्रेज़ेंस और रिपुटेशन कंसल्टिंग फर्म है।<br>
+                हम व्यवसायों, प्रोफेशनल्स और पब्लिक फिगर्स को Google, सोशल मीडिया और डिजिटल प्लेटफॉर्म पर एक मजबूत और भरोसेमंद पहचान बनाने में मदद करते हैं।<br><br>
+                आज के समय में ग्राहक किसी भी निर्णय से पहले ऑनलाइन सर्च करते हैं।<br>
+                हमारा उद्देश्य है कि जब कोई आपके व्यवसाय को ऑनलाइन खोजे, तो उसे प्रोफेशनल और विश्वसनीय छवि दिखाई दे।<br><br>
+                हम लॉन्ग-टर्म डिजिटल प्रतिष्ठा, बेहतर विजिबिलिटी और मजबूत ब्रांड इमेज बनाने पर ध्यान देते हैं ताकि आपका व्यवसाय ग्राहकों का भरोसा जीत सके।<br>
+                स्ट्रक्चर्ड और पारदर्शी तरीके से हम हर क्लाइंट के साथ काम करते हैं और उन्हें एक मजबूत डिजिटल पहचान बनाने में मदद करते हैं।<br><br>
+                <strong>प्रतिष्ठा बनाइए। प्रभाव बढ़ाइए।</strong>`,
                 
+                meetFounder: "फाउंडर से मिलें", founderRole: "Founder & Digital Strategist", founderBio: "Arjunkumar S Udawant एक डिजिटल प्रेज़ेंस स्ट्रेटेजिस्ट हैं जो व्यवसायों और प्रोफेशनल्स के लिए मजबूत और भरोसेमंद डिजिटल पहचान बनाने पर काम करते हैं। उन्होंने Pratishtha Digital Solutions की स्थापना इस उद्देश्य से की कि हर व्यवसाय की ऑनलाइन पहचान प्रोफेशनल और प्रभावशाली बने। वह स्वयं क्लाइंट कम्युनिकेशन, स्ट्रेटेजी प्लानिंग और सर्विस क्वालिटी पर ध्यान देते हैं ताकि हर क्लाइंट की डिजिटल प्रतिष्ठा मजबूत बने।",
+                servTitle: "हमारी सेवाएं",
+                s1Title: "Google Business Profile", s1Details: "<ul><li>प्रोफाइल सेटअप</li><li>विवरण लेखन</li><li>फोटो सेटअप</li><li>रिव्यु बढ़ाना</li><li>प्रोफेशनल जवाब</li><li>नेगेटिव रिव्यु हैंडलिंग</li></ul>", s1Ben: "लाभ: भरोसा और विजिबिलिटी।",
+                s2Title: "Social Media Management", s2Details: "<ul><li>पेज सेटअप</li><li>बायो</li><li>कंटेंट प्लानिंग</li><li>कैप्शन</li><li>पोस्टिंग</li><li>क्रिएटिव डिज़ाइन</li></ul>", s2Ben: "लाभ: ब्रांड वैल्यू।",
+                s3Title: "Reels & Short Video", s3Details: "<ul><li>रील आइडिया</li><li>एडिटिंग सपोर्ट</li><li>ट्रेंड स्ट्रेटेजी</li><li>पोस्टिंग</li></ul>", s3Ben: "लाभ: ज्यादा रीच।",
+                s4Title: "Personal Branding", s4Details: "<ul><li>इमेज स्ट्रेटेजी</li><li>प्रोफाइल बिल्डिंग</li><li>अथॉरिटी पोजिशनिंग</li><li>उपस्थिति</li></ul>", s4Ben: "लाभ: प्रभाव।",
+                s5Title: "Event Promotion", s5Details: "<ul><li>पोस्टर</li><li>डिजिटल इनविटेशन</li><li>अवेयरनेस</li><li>इवेंट हाइलाइट्स</li></ul>", s5Ben: "लाभ: पहचान।",
+                s6Title: "Website & Identity", s6Details: "<ul><li>बेसिक वेबसाइट</li><li>मोबाइल रिस्पॉन्सिव</li><li>लैंडिंग पेज</li><li>डोमेन गाइडेंस</li></ul>", s6Ben: "लाभ: विश्वसनीयता।",
+                s7Title: "WhatsApp Support", s7Details: "<ul><li>बिजनेस इंट्रो मैसेज</li><li>फेस्टिवल मैसेज</li><li>ब्रॉडकास्ट स्ट्रेटेजी</li><li>कंटेंट राइटिंग</li></ul>", s7Ben: "लाभ: कनेक्शन।",
+                whyTitle: "हमें क्यों चुनें",
+                wy1Title: "प्रतिष्ठा पहले", wy1Desc: "हम लॉन्ग-टर्म इमेज पर फोकस करते हैं।",
+                wy2Title: "पारदर्शी सेवाएं", wy2Desc: "साफ़ काम और कीमतें।",
+                wy3Title: "लोकल समझ", wy3Desc: "लोकल मार्केट की गहरी समझ।",
+                wy4Title: "फाउंडर की निगरानी", wy4Desc: "रणनीति फाउंडर द्वारा देखी जाती है।",
+                wy5Title: "लॉन्ग-टर्म प्रभाव", wy5Desc: "हम सिर्फ प्रचार नहीं, प्रभाव बनाते हैं।",
+
+                rev1Text: '"बहुत प्रोफेशनल और बेहतरीन सेवा। इन्होंने हमारी ऑनलाइन पहचान को काफी बेहतर बनाया है।"',
+                rev2Text: '"सबसे अच्छा डिजिटल ग्रोथ पार्टनर। हमारी लोकल विजिबिलिटी तेजी से बढ़ी है!"',
+                rev3Text: '"इनकी पारदर्शी और स्ट्रक्चर्ड डिजिटल रणनीतियों के लिए मैं इन्हें जरूर रेकमेंड करूंगा।"',
+                revLink: 'Google पर देखें',
+
+                workTitle: "हमारे साथ काम करें", workSubtitle: "फ्रीलांस अवसर", workDesc: "हम छात्रों और individuals को work-based freelance opportunities प्रदान करते हैं।", workWarn: "यह fixed salary role नहीं है। Payment strictly work-based रहेगा।", workRoles: "<li>Client coordination & calling</li><li>Social media support</li><li>Lead generation</li><li>Content assistance</li>", btnApply: "अभी आवेदन करें",
                 faqTitle: "सवाल-जवाब (FAQ)",
-                q1: "क्या ऐड बजट शामिल है?", a1: "नहीं, ऐड बजट अलग रहेगा।",
-                q2: "क्या डोमेन शामिल है?", a2: "नहीं, डोमेन और होस्टिंग अलग है।",
-                q3: "क्या मंथली पैकेज हैं?", a3: "हाँ, स्ट्रक्चर्ड मंथली पैकेज उपलब्ध हैं।",
-                q4: "क्या आप छोटे बिजनेस के साथ काम करते हैं?", a4: "हाँ, हम ग्रोइंग बिजनेस के साथ काम करते हैं।",
-                
-                contactTitle: "संपर्क जानकारी", connectTitle: "सोशल मीडिया",
-                footerTag: "प्रतिष्ठा बनाइए। प्रभाव बढ़ाइए।", footerLoc: "महाराष्ट्र, भारत"
+                q1: "क्या ऐड बजट शामिल है?", a1: "नहीं, विज्ञापन खर्च अलग है।",
+                q2: "क्या डोमेन शामिल है?", a2: "नहीं, डोमेन अलग है।",
+                q3: "क्या मंथली पैकेज हैं?", a3: "हाँ, पैकेज उपलब्ध हैं।",
+                q4: "क्या आप छोटे बिजनेस के साथ काम करते हैं?", a4: "हाँ, हम मदद करते हैं।",
+                q5: "परिणाम कब दिखेंगे?", a5: "कुछ हफ़्तों में।",
+                q6: "क्या कंटेंट मिलेगा?", a6: "हाँ, कंटेंट शामिल है।",
+                q7: "शुरुआत कैसे करें?", a7: "WhatsApp करें।",
+                enqTitle: "अपनी जरूरत बताएं", enqOpt: `<div class="check-item"><i class="fas fa-check-circle"></i> गूगल प्रेजेंस</div>
+                         <div class="check-item"><i class="fas fa-check-circle"></i> सोशल मीडिया</div>
+                         <div class="check-item"><i class="fas fa-check-circle"></i> रील्स सपोर्ट</div>
+                         <div class="check-item"><i class="fas fa-check-circle"></i> पर्सनल ब्रांडिंग</div>
+                         <div class="check-item"><i class="fas fa-check-circle"></i> इवेंट प्रमोशन</div>
+                         <div class="check-item"><i class="fas fa-check-circle"></i> वेबसाइट</div>
+                         <div class="check-item"><i class="fas fa-check-circle"></i> WhatsApp कम्युनिकेशन</div>`, btnEnq: "इंक्वायरी फॉर्म भरें",
+                footerTag: "प्रतिष्ठा बनाइए। प्रभाव छोड़िए।"
             },
             mr: {
-                navHome: "होम", navAbout: "आमच्याबद्दल", navServices: "सेवा", navWork: "काम करा", navGetStarted: "संपर्क",
+                navHome: "होम", navAbout: "आमच्याबद्दल", navServices: "सेवा", navWork: "आमच्यासोबत काम करा", navContact: "संपर्क साधा",
                 heroTitle: "प्रतिष्ठा निर्माण करा.<br>प्रभाव निर्माण करा.",
-                heroSubtitle: "व्यवसाय आणि प्रोफेशनल्ससाठी डिजिटल उपस्थिती समाधान.",
-                heroText: "Pratishtha Digital Solutions ही महाराष्ट्रातील डिजिटल कन्सल्टिंग फर्म आहे. आम्ही व्यवसाय आणि व्यक्तींना त्यांची ऑनलाइन ओळख मजबूत करणे, विश्वास वाढवणे आणि डिजिटल प्रतिष्ठा तयार करणे यामध्ये मदत करतो.",
-                btnStarted: "सुरुवात करा <i class='fas fa-arrow-right'></i>",
-                btnWhatsapp: "WhatsApp वर बोला <i class='fab fa-whatsapp'></i>",
-                offerTitle: "आम्ही काय देतो", offerSubtitle: "तुमच्या डिजिटल वाढीसाठी सर्वकाही.",
-                feat1: "Google Presence", feat2: "Social Media", feat3: "Personal Branding", feat4: "Digital Identity", feat5: "Event Promotion",
-                whyTitle: "आम्हालाच का निवडावे", whySubtitle: "आम्ही प्रतिष्ठेला महत्त्व देतो.",
-                why1T: "प्रतिष्ठा प्रथम", why1D: "आम्ही long-term image वर लक्ष देतो.",
-                why2T: "पारदर्शक सेवा", why2D: "ठराविक किंमत आणि स्पष्ट काम.",
-                why3T: "स्थानिक समज", why3D: "स्थानिक मार्केटची उत्तम जाण.",
-                why4T: "फाउंडरचे लक्ष", why4D: "रणनीती फाउंडर स्वतः पाहतात.",
-                why5T: "दीर्घकालीन प्रभाव", why5D: "आम्ही सातत्याने काम करतो.",
-                howWorkTitle: "काम करण्याची पद्धत",
-                step1T: "1. समजून घेणे", step1D: "आम्ही तुमची गरज समजतो.",
-                step2T: "2. रणनीती", step2D: "योग्य डिजिटल प्लॅन बनवतो.",
-                step3T: "3. अंमलबजावणी", step3D: "आम्ही काम आणि सपोर्ट देतो.",
-                aboutTitle: "आमच्याबद्दल",
-                aboutText: "Pratishtha Digital Solutions चा उद्देश व्यवसाय आणि व्यक्तींना डिजिटल माध्यमातून प्रतिष्ठा आणि ओळख निर्माण करण्यास मदत करणे हा आहे. आज डिजिटल युगात तुमची online image खूप महत्त्वाची आहे.",
-                meetFounder: "फाउंडर बद्दल", founderRole: "फाउंडर – Pratishtha Digital Solutions",
-                founderBio: "Arjunkumar S Udawant हे digital strategist आहेत. त्यांना reputation building, public perception आणि brand identity यामध्ये विशेष रुची आहे. <br><br>स्थानिक आणि वाढत्या व्यवसायांना structured, ethical आणि professional digital services देण्यासाठी त्यांनी Pratishtha Digital Solutions ची स्थापना केली. ते स्वतः client communication, strategy planning आणि service execution वर लक्ष ठेवतात.",
+                heroSub: "व्यवसाय आणि प्रोफेशनल्ससाठी डिजिटल उपस्थिती समाधान.",
+                heroDesc: "Pratishtha Digital Solutions ही महाराष्ट्रातील डिजिटल कन्सल्टिंग फर्म आहे. आम्ही व्यवसाय आणि व्यक्तींना त्यांची ऑनलाइन ओळख मजबूत करणे, विश्वास वाढवणे आणि डिजिटल प्रतिष्ठा तयार करणे यामध्ये मदत करतो.",
+                heroTrust: "महाराष्ट्रातील वाढत्या व्यवसायांसाठी विश्वासू डिजिटल पार्टनर.",
+                btnStart: "सुरुवात करा <i class='fas fa-arrow-right'></i>",
+                btnChat: "WhatsApp वर बोला <i class='fab fa-whatsapp'></i>",
+                stat1Label: "ग्राहक समाधान", stat2Label: "गूगल रेटिंग", stat3Label: "सहकार्य",
+                wwhTitle: "आम्ही कोणासाठी काम करतो", wwh1: "स्थानिक व्यवसाय", wwh2: "क्लिनिक आणि रुग्णालये", wwh3: "रेस्टॉरंट आणि कॅफे", wwh4: "रिअल इस्टेट", wwh5: "राजकीय / सामाजिक प्रोफाइल", wwh6: "शिक्षण संस्था",
+                psTitle: "व्यवसाय ऑनलाइन ग्राहक का गमावतात?",
+                probTitle: "समस्या", prob1: "कमी गूगल रिव्ह्यू किंवा खराब रेटिंग.", prob2: "सर्च केल्यावर माहिती दिसत नाही.", prob3: "डिजिटल ओळख कमकुवत.", prob4: "सोशल मीडियावर सक्रिय नसणे.",
+                solTitle: "आमचा उपाय", solDesc: "आम्ही मजबूत डिजिटल उपस्थिती तयार करतो.",
+                sol1: "जास्त विश्वास", sol2: "चांगली व्हिजिबिलिटी", sol3: "जास्त चौकशी",
                 
-                servicesTitle: "आमच्या सेवा", servicesSubtitle: "विश्वास वाढवण्यासाठी डिजिटल सोल्यूशन्स.",
-                s1T: "Google Business Profile", s1D: "ग्राहक सर्वात आधी गुगलवर चेक करतात.",
-                s1L: "<li>Profile setup आणि optimisation</li><li>Category आणि description writing</li><li>Profile photo setup</li><li>Services section updates</li><li>Review growth guidance</li><li>Professional replies support</li><li>Negative review handling</li>",
-                s1B: "फायदा: ग्राहकाचा विश्वास आणि ओळख.",
-
-                s2T: "Social Media", s2D: "Instagram आणि Facebook वर मजबूत उपस्थिती.",
-                s2L: "<li>Page setup आणि optimisation</li><li>Bio writing</li><li>Weekly content planning</li><li>Captions + hashtags</li><li>Regular posts</li><li>Creative designs</li>",
-                s2B: "फायदा: उत्तम reach आणि ब्रँड व्हॅल्यू.",
-
-                s3T: "Reels & Video", s3D: "व्हिडिओमुळे reach लवकर वाढते.",
-                s3L: "<li>Reel ideas</li><li>Editing support</li><li>Trend-based strategy</li><li>Posting optimisation</li>",
-                s3B: "फायदा: जास्त लोकांपर्यंत पोहोच.",
-
-                s4T: "Personal Branding", s4D: "व्यक्ती आणि प्रोफेशनल्ससाठी.",
-                s4L: "<li>Image strategy</li><li>Profile building</li><li>Authority positioning</li><li>Consistent public presence</li>",
-                s4B: "फायदा: समाजात प्रतिष्ठा आणि प्रभाव.",
-
-                s5T: "Event Promotion", s5D: "इव्हेंट्ससाठी डिजिटल जाहिरात.",
-                s5L: "<li>Posters आणि announcements</li><li>Digital invitations</li><li>Awareness creatives</li><li>Event highlights</li>",
-                s5B: "फायदा: कार्यक्रमाची प्रसिद्धी.",
-
-                s6T: "Website & Identity", s6D: "विश्वासासाठी क्लीन वेबसाईट.",
-                s6L: "<li>Basic website (1–3 pages)</li><li>Mobile responsive</li><li>Landing pages</li><li>Domain guidance</li>",
-                domainNote: "⚠ Domain आणि hosting चा खर्च वेगळा असेल.",
-                s6B: "फायदा: प्रोफेशनल ओळख.",
-
-                s7T: "WhatsApp Support", s7D: "प्रोफेशनल कम्युनिकेशनसाठी.",
-                s7L: "<li>Business intro messages</li><li>Festival updates</li><li>Broadcast strategy</li><li>Content writing</li>",
-                s7B: "फायदा: ग्राहकाशी उत्तम संवाद.",
-
-                tellReq: "तुमची गरज सांगा", selectText: "तुम्ही निवडू शकता:", fillFormBtn: "Enquiry Form भरा",
-                selectList: "<li>✅ Google Presence & Reviews</li><li>✅ Social Media Management</li><li>✅ Reels Support</li><li>✅ Personal Branding</li><li>✅ Event Promotion</li><li>✅ Website Development</li><li>✅ WhatsApp Communication</li>",
-
-                workTitle: "आमच्यासोबत काम करा", workSubtitle: "फ्रीलांस संधी",
-                joinTitle: "आमच्या नेटवर्कमध्ये या", joinText: "आम्ही विद्यार्थ्यांसाठी आणि individuals साठी work-based freelance opportunities देतो.", joinNote: "⚠ हे fixed salary role नाही. Payment strictly work-based असेल.",
-                workRoles: "<li>Client coordination & calling</li><li>Social media support</li><li>Lead generation</li><li>Content assistance</li>",
-                applyBtn: "अप्लाय करा",
+                aboutTitle: "आमच्याबद्दल", 
+                aboutDesc: `<strong>आमच्याबद्दल</strong>
+                Pratishtha Digital Solutions ही महाराष्ट्रातील एक प्रोफेशनल डिजिटल प्रेझेन्स आणि रिप्युटेशन कन्सल्टिंग फर्म आहे.<br>
+                आम्ही व्यवसाय, प्रोफेशनल्स आणि पब्लिक फिगर्सना Google, सोशल मीडिया आणि डिजिटल प्लॅटफॉर्मवर मजबूत आणि विश्वासार्ह ओळख निर्माण करण्यात मदत करतो.<br><br>
+                आजच्या काळात ग्राहक कोणताही निर्णय घेण्यापूर्वी ऑनलाइन सर्च करतात.<br>
+                आमचे उद्दिष्ट असे आहे की जेव्हा कोणी तुमचा व्यवसाय शोधेल तेव्हा त्यांना प्रोफेशनल आणि विश्वासार्ह प्रतिमा दिसली पाहिजे.<br><br>
+                आम्ही दीर्घकालीन डिजिटल प्रतिष्ठा, चांगली विजिबिलिटी आणि मजबूत ब्रँड इमेज तयार करण्यावर लक्ष देतो, ज्यामुळे तुमच्या व्यवसायावर ग्राहकांचा विश्वास वाढतो.<br>
+                स्ट्रक्चर्ड आणि पारदर्शक पद्धतीने आम्ही प्रत्येक क्लायंटसोबत काम करतो आणि त्यांची मजबूत डिजिटल ओळख तयार करतो.<br><br>
+                <strong>प्रतिष्ठा निर्माण करा. प्रभाव निर्माण करा.</strong>`,
                 
+                meetFounder: "फाउंडर बद्दल", founderRole: "Founder & Digital Strategist", founderBio: "Arjunkumar S Udawant हे डिजिटल प्रेझेन्स स्ट्रॅटेजिस्ट असून ते व्यवसाय आणि प्रोफेशनल्ससाठी मजबूत आणि विश्वासार्ह डिजिटल ओळख निर्माण करण्यावर काम करतात. प्रत्येक व्यवसायाची ऑनलाइन प्रतिमा प्रोफेशनल आणि प्रभावी व्हावी या उद्देशाने त्यांनी Pratishtha Digital Solutions ची स्थापना केली. ते स्वतः क्लायंट कम्युनिकेशन, स्ट्रॅटेजी प्लॅनिंग आणि सर्विस क्वालिटीवर लक्ष ठेवतात, ज्यामुळे प्रत्येक क्लायंटची डिजिटल प्रतिष्ठा मजबूत होते.",
+                servTitle: "आमच्या सेवा",
+                s1Title: "Google Business Profile", s1Details: "<ul><li>प्रोफाइल सेटअप</li><li>माहिती लेखन</li><li>फोटो सेटअप</li><li>रिव्ह्यू वाढवणे</li><li>प्रोफेशनल उत्तरे</li><li>निगेटिव्ह रिव्ह्यू हँडलिंग</li></ul>", s1Ben: "फायदा: ग्राहकाचा विश्वास.",
+                s2Title: "Social Media Management", s2Details: "<ul><li>पेज सेटअप</li><li>बायो</li><li>कंटेंट प्लॅनिंग</li><li>कॅप्शन</li><li>पोस्टिंग</li><li>क्रिएटिव्ह डिझाईन्स</li></ul>", s2Ben: "फायदा: ब्रँड व्हॅल्यू.",
+                s3Title: "Reels & Short Video", s3Details: "<ul><li>रील आयडिया</li><li>एडिटिंग सपोर्ट</li><li>ट्रेंड स्ट्रॅटेजी</li><li>पोस्टिंग</li></ul>", s3Ben: "फायदा: जास्त लोकांपर्यंत पोहोच.",
+                s4Title: "Personal Branding", s4Details: "<ul><li>इमेज स्ट्रॅटेजी</li><li>प्रोफाइल बिल्डिंग</li><li>अथॉरिटी पोझिशनिंग</li><li>उपस्थिती</li></ul>", s4Ben: "फायदा: समाजात प्रतिष्ठा.",
+                s5Title: "Event Promotion", s5Details: "<ul><li>पोस्टर्स</li><li>डिजिटल आमंत्रणे</li><li>अवेअरनेस</li><li>इव्हेंट हायलाईट्स</li></ul>", s5Ben: "फायदा: कार्यक्रमाची प्रसिद्धी.",
+                s6Title: "Website & Identity", s6Details: "<ul><li>बेसिक वेबसाईट</li><li>मोबाईल रिस्पॉन्सिव्ह</li><li>लँडिंग पेजेस</li><li>डोमेन मार्गदर्शन</li></ul>", s6Ben: "फायदा: प्रोफेशनल ओळख.",
+                s7Title: "WhatsApp Support", s7Details: "<ul><li>बिझनेस इंट्रो मेसेजेस</li><li>सण-उत्सव मेसेजेस</li><li>ब्रॉडकास्ट स्ट्रॅटेजी</li><li>कंटेंट रायटिंग</li></ul>", s7Ben: "फायदा: ग्राहकाशी उत्तम संवाद.",
+                whyTitle: "आम्हालाच का निवडावे",
+                wy1Title: "प्रतिष्ठा प्रथम", wy1Desc: "आम्ही दीर्घकालीन विचारांवर भर देतो.",
+                wy2Title: "पारदर्शक सेवा", wy2Desc: "स्पष्ट काम आणि किंमत.",
+                wy3Title: "स्थानिक समज", wy3Desc: "स्थानिक मार्केटची उत्तम जाण.",
+                wy4Title: "फाउंडरचे लक्ष", wy4Desc: "रणनीती फाउंडर स्वतः पाहतात.",
+                wy5Title: "दीर्घकालीन प्रभाव", wy5Desc: "आम्ही सातत्याने काम करतो.",
+
+                rev1Text: '"अतिशय प्रोफेशनल आणि उत्तम सेवा. त्यांनी आमची ऑनलाइन ओळख सुधारण्यास खूप मदत केली."',
+                rev2Text: '"सर्वोत्तम डिजिटल ग्रोथ पार्टनर. आमची लोकल विजिबिलिटी खूप वेगाने वाढली आहे!"',
+                rev3Text: '"त्यांच्या पारदर्शक आणि स्ट्रक्चर्ड डिजिटल रणनीतीसाठी नक्कीच रेकमेंड करेन."',
+                revLink: 'Google वर पहा',
+
+                workTitle: "आमच्यासोबत काम करा", workSubtitle: "फ्रीलांस संधी", workDesc: "आम्ही विद्यार्थ्यांसाठी आणि individuals साठी work-based freelance opportunities देतो.", workWarn: "हे fixed salary role नाही. Payment strictly work-based असेल.", workRoles: "<li>Client coordination & calling</li><li>Social media support</li><li>Lead generation</li><li>Content assistance</li>", btnApply: "आता अप्लाय करा",
                 faqTitle: "प्रश्न (FAQ)",
-                q1: "जाहिरात खर्च यात आहे का?", a1: "नाही, ऍड बजेट वेगळे असेल.",
-                q2: "डोमेन यात आहे का?", a2: "नाही, डोमेन/होस्टिंग वेगळे आहे.",
-                q3: "मंथली पॅकेज आहेत का?", a3: "हो, मंथली पॅकेज उपलब्ध आहेत.",
-                q4: "लहान व्यवसायांसाठी आहे का?", a4: "हो, आम्ही वाढत्या व्यवसायांसोबत काम करतो.",
-                
-                contactTitle: "संपर्क माहिती", connectTitle: "सोशल मीडिया",
-                footerTag: "प्रतिष्ठा निर्माण करा. प्रभाव निर्माण करा.", footerLoc: "महाराष्ट्र, भारत"
+                q1: "जाहिरात खर्च यात आहे का?", a1: "नाही, जाहिरात खर्च वेगळा असेल.",
+                q2: "डोमेन यात आहे का?", a2: "नाही, डोमेन वेगळे आहे.",
+                q3: "मंथली पॅकेज आहेत का?", a3: "हो, मंथली पॅकेज आहेत.",
+                q4: "लहान व्यवसायांसाठी आहे का?", a4: "हो, आम्ही मदत करतो.",
+                q5: "निकाल कधी दिसतील?", a5: "काही आठवड्यात.",
+                q6: "कंटेंट मिळेल का?", a6: "हो, कंटेंट समाविष्ट आहे.",
+                q7: "सुरुवात कशी करावी?", a7: "WhatsApp करा.",
+                enqTitle: "तुमची गरज सांगा", enqOpt: `<div class="check-item"><i class="fas fa-check-circle"></i> गूगल प्रेझेन्स</div>
+                         <div class="check-item"><i class="fas fa-check-circle"></i> सोशल मीडिया</div>
+                         <div class="check-item"><i class="fas fa-check-circle"></i> रील्स सपोर्ट</div>
+                         <div class="check-item"><i class="fas fa-check-circle"></i> वैयक्तिक ब्रँडिंग</div>
+                         <div class="check-item"><i class="fas fa-check-circle"></i> इव्हेंट जाहिरात</div>
+                         <div class="check-item"><i class="fas fa-check-circle"></i> वेबसाईट</div>
+                         <div class="check-item"><i class="fas fa-check-circle"></i> WhatsApp संवाद</div>`, btnEnq: "इन्क्वायरी फॉर्म भरा",
+                footerTag: "प्रतिष्ठा निर्माण करा. प्रभाव पाडा."
             }
         };
 
         function changeLanguage(lang) {
-            document.body.classList.remove('lang-in');
-            if (lang === 'hi' || lang === 'mr') {
+            const data = content[lang];
+            
+            if(lang === 'hi' || lang === 'mr') {
                 document.body.classList.add('lang-in');
+            } else {
+                document.body.classList.remove('lang-in');
             }
 
-            const t = translations[lang];
-            for (let key in t) {
+            for (let key in data) {
                 const el = document.getElementById(key);
-                if (el) el.innerHTML = t[key];
-            }
-        }
-
-        // Scroll Reveal Animation
-        window.addEventListener('scroll', reveal);
-        function reveal(){
-            var reveals = document.querySelectorAll('.reveal');
-            for(var i = 0; i < reveals.length; i++){
-                var windowheight = window.innerHeight;
-                var revealtop = reveals[i].getBoundingClientRect().top;
-                var revealpoint = 150;
-                if(revealtop < windowheight - revealpoint){
-                    reveals[i].classList.add('active');
-                }
+                if (el) el.innerHTML = data[key];
             }
         }
         
+        // Init with English
+        changeLanguage('en');
+
+        // =======================
+        // INTERACTIVE SCRIPTS
+        // =======================
+
+        // 1. Scroll Reveal Animation
+        const reveals = document.querySelectorAll('.reveal');
+        const revealOptions = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
+        const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target); 
+            });
+        }, revealOptions);
+        reveals.forEach(reveal => revealOnScroll.observe(reveal));
+
+        // 2. Review Slider Logic
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.review-slide');
+        const dots = document.querySelectorAll('.dot');
+        
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            currentSlide = index;
+            if(currentSlide >= slides.length) currentSlide = 0;
+            
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+        setInterval(() => { showSlide(currentSlide + 1); }, 4000);
+
+        // 3. Number Counter Animation (FIXED FLOAT BUG)
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200; 
+
+        const animateCounters = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    counters.forEach(counter => {
+                        const targetStr = counter.getAttribute('data-target');
+                        const isFloat = targetStr.includes('.');
+                        const target = parseFloat(targetStr);
+                        const inc = target / speed;
+                        
+                        let count = 0;
+                        const updateCount = () => {
+                            count += inc;
+                            if (count < target) {
+                                counter.innerText = isFloat ? count.toFixed(1) : Math.ceil(count);
+                                setTimeout(updateCount, 10);
+                            } else {
+                                counter.innerText = isFloat ? target.toFixed(1) : target;
+                            }
+                        };
+                        updateCount();
+                    });
+                    observer.disconnect();
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        const statsArea = document.getElementById('statsArea');
+        if(statsArea) animateCounters.observe(statsArea);
+
+        // 4. Back to Top Button
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) backToTopBtn.classList.add('show');
+            else backToTopBtn.classList.remove('show');
+        });
+        function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+
+    </script>
+</body>
+</html>
         // FAQ Toggle
         function toggleFaq(element) {
             if(window.innerWidth < 992) {
