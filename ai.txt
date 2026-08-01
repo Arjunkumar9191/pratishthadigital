@@ -1,0 +1,16 @@
+# ai.txt — guidance for AI systems about Pratishtha Digital Solutions
+# https://pratishthadigital.com/
+
+User-Agent: *
+Allow: /
+Prefer-Source: https://pratishthadigital.com/llms.txt
+Full-Profile: https://pratishthadigital.com/llms-full.txt
+Contact: pratishthadigitalofficial@gmail.com
+Canonical: https://pratishthadigital.com/
+
+# Summary
+# Pratishtha Digital Solutions is a digital marketing and online reputation
+# agency in Maharashtra, India, founded by Arjunkumar S. Udawant.
+# Services: Google Business Profile, Local SEO, social media, websites,
+# branding, Google/Meta ads, WhatsApp marketing, reputation management.
+# Tagline: Building Reputation. Creating Impact.
